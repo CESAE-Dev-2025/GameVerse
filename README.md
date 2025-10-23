@@ -1,3 +1,3 @@
-# Game On
+# GameVerse
 
 Website de comunidade Gamer
