@@ -5,8 +5,9 @@
         "Liberation Mono", "Courier New", monospace;
     --font-size: 16px;
     --color-primary: rgb(240, 177, 0);
+    --background: rgb(15, 23, 43);
 
-    --background: #fff;
+    /* --background: #fff; */
     --foreground: rgb(10, 10, 10);
     --card: #fff;
     --card-foreground: rgb(10, 10, 10);
@@ -98,9 +99,25 @@
         --font-mono--font-variation-settings
     );
 }
-nav > .navbar-brand {
+body {
+    background-color: var(--background) !important;
+}
+nav {
+    border: 1px solid var(--color-slate-800);
+}
+nav * {
+    color: white !important;
+}
+.navbar-brand {
     font-size: 1.5rem;
 }
-nav > em {
+.navbar-brand em {
+    color: var(--color-primary) !important;
+    font-style: normal;
+}
+.nav-link.active {
+    color: var(--color-primary) !important;
+}
+.nav-link:hover {
     color: var(--color-primary) !important;
 }
