@@ -10,6 +10,7 @@
     --color-slate-800: rgb(29, 41, 61);
     --color-slate-900: rgb(15, 23, 43);
     --background: rgb(15, 23, 43);
+    --color-slate-400: rgb(144, 161, 185);
 
     /* --background: #fff; */
     /* --foreground: rgb(10, 10, 10);
@@ -107,7 +108,7 @@ body {
 }
 nav {
     background-color: var(--background) !important;
-    border: 1px solid var(--color-slate-800);
+    border-bottom: 1px solid var(--color-slate-800);
 }
 nav * {
     color: white !important;
@@ -144,24 +145,54 @@ nav * {
     &:hover {
         background-color: var(--color-yellow-600) !important;
     }
-    & .bi.bi-person {
+    & .fa-user {
         color: var(--color-slate-900) !important;
     }
 }
 #navbarToggler {
-    /* margin-top: 11px; */
-
     & ul {
         @media (max-width: 991px) {
             border-top: 1px solid var(--color-slate-800);
             border-bottom: 1px solid var(--color-slate-800);
         }
     }
-
-    & form {
-        /* padding-top: 8px; */
-    }
 }
 .nav-toggler {
     color: #fff !important;
+}
+/**********************************************************************************************************************/
+.test-div {
+    background: green;
+    height: 350px;
+}
+
+footer {
+    background-color: var(--background);
+    border: 1px solid var(--color-slate-800);
+    color: var(--color-slate-400);
+    margin-top: 80px;
+    & h4 {
+        font-size: 1rem;
+    }
+
+    & ul {
+        list-style: none;
+    }
+}
+.footer-text {
+    color: var(--color-slate-400);
+}
+.footer-link {
+    text-decoration: none;
+    text-transform: none;
+    color: inherit;
+
+    &:hover {
+        color: var(--color-yellow-500);
+    }
+}
+.copyright {
+    border-top: 1px solid var(--color-slate-800);
+    margin-top: 32px;
+    padding-top: 32px;
 }
