@@ -5,10 +5,14 @@
         "Liberation Mono", "Courier New", monospace;
     --font-size: 16px;
     --color-primary: rgb(240, 177, 0);
+    --color-yellow-500: rgb(240, 177, 0);
+    --color-yellow-600: rgb(208, 135, 0);
+    --color-slate-800: rgb(29, 41, 61);
+    --color-slate-900: rgb(15, 23, 43);
     --background: rgb(15, 23, 43);
 
     /* --background: #fff; */
-    --foreground: rgb(10, 10, 10);
+    /* --foreground: rgb(10, 10, 10);
     --card: #fff;
     --card-foreground: rgb(10, 10, 10);
     --popover: rgb(255, 255, 255);
@@ -97,12 +101,12 @@
     );
     --default-mono-font-variation-settings: var(
         --font-mono--font-variation-settings
-    );
+    ); */
 }
 body {
-    background-color: var(--background) !important;
 }
 nav {
+    background-color: var(--background) !important;
     border: 1px solid var(--color-slate-800);
 }
 nav * {
@@ -120,4 +124,44 @@ nav * {
 }
 .nav-link:hover {
     color: var(--color-primary) !important;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: white !important;
+    border: none;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.btn-login {
+    color: var(--color-slate-900) !important;
+    background-color: var(--color-primary);
+
+    &:hover {
+        background-color: var(--color-yellow-600) !important;
+    }
+    & .bi.bi-person {
+        color: var(--color-slate-900) !important;
+    }
+}
+#navbarToggler {
+    /* margin-top: 11px; */
+
+    & ul {
+        @media (max-width: 991px) {
+            border-top: 1px solid var(--color-slate-800);
+            border-bottom: 1px solid var(--color-slate-800);
+        }
+    }
+
+    & form {
+        /* padding-top: 8px; */
+    }
+}
+.nav-toggler {
+    color: #fff !important;
 }
