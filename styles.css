@@ -4,16 +4,17 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
     --font-size: 16px;
+
     --color-primary: rgb(240, 177, 0);
     --color-yellow-500: rgb(240, 177, 0);
     --color-yellow-600: rgb(208, 135, 0);
+    --color-slate-400: rgb(144, 161, 185);
     --color-slate-800: rgb(29, 41, 61);
     --color-slate-900: rgb(15, 23, 43);
     --color-slate-950: rgb(2, 6, 24);
-    --background-header: rgb(15, 23, 43);
-    --background-footer: rgb(15, 23, 43);
-    --color-slate-400: rgb(144, 161, 185);
+    --background-content: rgb(15, 23, 43);
     --background: rgb(2, 6, 24);
+    --card-foreground: rgb(10, 10, 10);
 
     /* --background: #fff; */
     /* --foreground: rgb(10, 10, 10);
@@ -109,9 +110,21 @@
 }
 body {
     background-color: var(--background);
+    color: var(--color-slate-400);
 }
+/* Margem adicionada para o elemento não ficar escondido atrás da navbar, que tem posição fixa */
+main {
+    margin-top: 80px;
+}
+.py-7 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+/**********************************************************************************************************************/
+/***                                                   Nav styles                                                   ***/
+/**********************************************************************************************************************/
 nav {
-    background-color: var(--background-header) !important;
+    background-color: var(--background-content) !important;
     border-bottom: 1px solid var(--color-slate-800);
 }
 nav * {
@@ -165,13 +178,12 @@ nav * {
     color: #fff !important;
 }
 /**********************************************************************************************************************/
-.test-div {
-    background: green;
-    height: 350px;
-}
 
+/**********************************************************************************************************************/
+/***                                                 Footer styles                                                  ***/
+/**********************************************************************************************************************/
 footer {
-    background-color: var(--background-footer);
+    background-color: var(--background-content);
     border: 1px solid var(--color-slate-800);
     color: var(--color-slate-400);
     margin-top: 80px;
@@ -200,3 +212,4 @@ footer {
     margin-top: 32px;
     padding-top: 32px;
 }
+/**********************************************************************************************************************/
