@@ -1,0 +1,110 @@
+/* ===== Estilos gerais ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0c10;
+  color: #fff;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #10121a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.logo span {
+  color: #f5c400;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #f5c400;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: url('images/index-hero-bg.png') center center / cover no-repeat;
+  min-height: 100vh; /* ocupa toda a altura da viewport */
+  width: 100%;       /* ocupa toda a largura */
+  background-position: center top; /* ajusta o foco da imagem */
+  background-attachment: fixed; /* efeito parallax opcional */
+  display: flex;
+  align-items: center; /* centra o conteúdo verticalmente */
+  padding: 3rem;
+  text-align: left;
+  color: white;
+}
+
+
+.hero-content h2 span {
+  color: #f5c400;
+}
+
+.buttons .btn,
+.buttons .btn-outline {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #f5c400;
+  color: #000;
+}
+
+.btn-outline {
+  border: 2px solid #f5c400;
+  color: #f5c400;
+}
+
+/* ===== Estatísticas ===== */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  background-color: #161821;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* ===== Call to Action ===== */
+.cta {
+  background-color: #f5c400;
+  color: #000;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.cta .btn {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #10121a;
+  text-align: center;
+  padding: 1rem;
+  color: #bbb;
+  font-size: 0.9rem;
+}

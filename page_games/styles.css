@@ -1,0 +1,83 @@
+/* ===== Estilos básicos ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0c10;
+  color: #fff;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #10121a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.logo span {
+  color: #f5c400;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #f5c400;
+}
+
+/* ===== Catálogo de Jogos ===== */
+.catalogo {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.jogos-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.jogo {
+  background-color: #1a1c26;
+  border-radius: 10px;
+  width: 250px;
+  padding: 1rem;
+}
+
+.jogo img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ===== Guia para Iniciantes ===== */
+.guia {
+  background-color: #161821;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.guia h3 {
+  color: #f5c400;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #10121a;
+  text-align: center;
+  padding: 1rem;
+  color: #bbb;
+  font-size: 0.9rem;
+}
