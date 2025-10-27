@@ -9,8 +9,11 @@
     --color-yellow-600: rgb(208, 135, 0);
     --color-slate-800: rgb(29, 41, 61);
     --color-slate-900: rgb(15, 23, 43);
-    --background: rgb(15, 23, 43);
+    --color-slate-950: rgb(2, 6, 24);
+    --background-header: rgb(15, 23, 43);
+    --background-footer: rgb(15, 23, 43);
     --color-slate-400: rgb(144, 161, 185);
+    --background: rgb(2, 6, 24);
 
     /* --background: #fff; */
     /* --foreground: rgb(10, 10, 10);
@@ -105,9 +108,10 @@
     ); */
 }
 body {
+    background-color: var(--background);
 }
 nav {
-    background-color: var(--background) !important;
+    background-color: var(--background-header) !important;
     border-bottom: 1px solid var(--color-slate-800);
 }
 nav * {
@@ -167,7 +171,7 @@ nav * {
 }
 
 footer {
-    background-color: var(--background);
+    background-color: var(--background-footer);
     border: 1px solid var(--color-slate-800);
     color: var(--color-slate-400);
     margin-top: 80px;
