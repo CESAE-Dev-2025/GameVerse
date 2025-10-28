@@ -4,11 +4,13 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
     --font-size: 16px;
+    --accent-foreground: #030213;
 
     --color-primary: rgb(240, 177, 0);
     --color-yellow-500: rgb(240, 177, 0);
     --color-yellow-600: rgb(208, 135, 0);
     --color-slate-400: rgb(144, 161, 185);
+    --color-slate-700: rgb(49, 65, 88);
     --color-slate-800: rgb(29, 41, 61);
     --color-slate-900: rgb(15, 23, 43);
     --color-slate-950: rgb(2, 6, 24);
