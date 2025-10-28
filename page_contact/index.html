@@ -2,219 +2,423 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameVerse | Fórum</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameVerse | Fórum</title>
 
-    <!-- Add Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  <!-- Bootstrap Icons & Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Add Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<!--===============================================================================================-->
 
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./contact.css">
+  <link rel="stylesheet" href="forum.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/util.css">
 
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="forum.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin>
+
+  <style>
+    #map {
+      width: 100%;
+      height: 400px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0,0,0,.25);
+    }
+    .leaflet-container img,
+    .leaflet-container .leaflet-marker-icon,
+    .leaflet-container .leaflet-marker-shadow { max-width: none !important; }
+
+    .country-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 1rem 1rem .25rem;
+    }
+    .country-title { color:#fff; margin:0 0 .25rem; font-weight:700; }
+    .country-sub { color:#adb5bd; margin:0 0 .75rem; font-size:.95rem; }
+
+    .place-item { cursor:pointer; border-radius:10px; padding:.6rem .65rem !important; }
+    .place-item:hover, .place-item:focus { background:rgba(255,255,255,.06); outline:none; }
+    .place-row { display:flex; align-items:flex-start; }
+    .place-name { color:#d8e0ff; font-weight:600; line-height:1.2; }
+    .place-desc { color:#97a0aa; font-size:.92rem; margin-left:1.65rem; }
+
+    @media (max-width: 992px){ #map{ height:45vh; } }
+    @media (max-width: 576px){ #map{ height:320px; } }
+  </style>
 </head>
 
 <body>
-    <header>
-        <!-- TODO: Change hamburguer menu color to white -->
-        <nav class="navbar fixed-top navbar-expand-lg py-3">
-            <div class="container-xxl mx-auto px-auto">
-                <a class="navbar-brand text-uppercase" href="#">Game<em>verse</em></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
-                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarToggler">
-                    <ul class="navbar-nav mx-auto mb-3 mb-lg-0 py-3 py-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/page_games/">Jogos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/page_events/">Eventos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/page_forum/">Fórum</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <!-- TODO: Add magnifier glass to show search bar -->
-                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" /> -->
-                        <button class="btn btn-login flex-fill" type="submit"><i class="fa-regular fa-user me-2"></i>
-                            Entrar</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg py-3">
+      <div class="container-xxl mx-auto px-auto">
+        <a class="navbar-brand text-uppercase" href="#">Game<em>verse</em></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <main>
-        <section id="page-header" class="py-7">
-            <div class="container-xxl mx-auto px-3">
-                <div class="d-flex align-items-center">
-                    <div class="flex-fill">
-                        <h1 class="text-white fw-light mb-3">Contacto</h1>
-                        <p class="m-0 fs-5">Caso tenha alguma questão, entre em contacto connosco.
-                        </p>
-                    </div>
-                    <div>
-                        <button class="btn btn-new-topic" type="submit"><i class="fa-regular fa-plus me-2"></i>
-                            Novo Tópico</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-<div class="contact1">
-		<div class="container-contact1">
-			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="./envelope.png" alt="IMG">
-			</div>
-
-			<form class="contact1-form validate-form">
-				<span class="contact1-form-title text-white">
-					Get in touch
-				</span>
-
-				<div class="wrap-input1 validate-input" data-validate="Name is required">
-					<input class="input1" type="text" name="name" placeholder="Nome">
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-					<input class="input1" type="text" name="email" placeholder="Email">
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="wrap-input1 validate-input" data-validate="Subject is required">
-					<input class="input1" type="text" name="subject" placeholder="Assunto">
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="wrap-input1 validate-input" data-validate="Message is required">
-					<textarea class="input1" name="message" placeholder="Escreva a sua mensagem aqui"></textarea>
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="container-contact1-form-btn">
-					<button class="contact1-form-btn">
-						<span>
-							Send Email
-							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</span>
-					</button>
-				</div>
-			</form>
-		</div>
-	</div>
-
-
-
-
-	<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script>
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-23581568-13');
-	</script>
-
-	<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
-
-
-
-
-
-    <footer class="">
-        <div class="container-xxl py-5 px-3">
-            <div class="row justify-content-between gy-4">
-                <div class="col-12 col-lg-3">
-                    <span class="navbar-brand text-white text-uppercase" href="#">Game<em>verse</em></span>
-                    <p class="mt-3 mt-lg-0">A comunidade gamer definitiva. Conecte-se, jogue e compete com jogadores de
-                        todo o mundo.</p>
-                </div>
-                <div class="col-12 col-lg-3">
-                    <h4 class="text-white fw-bold mb-3">Links Rápidos</h4>
-                    <ul class="p-0 m-0">
-                        <li class="mb-2"><a class="footer-link" href="">Início</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Jogos</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Eventos</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Fórum</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-lg-3">
-                    <h4 class="text-white fw-bold mb-3">Comunidade</h4>
-                    <ul class="p-0 m-0">
-                        <li class="mb-2"><a class="footer-link" href="">Regras</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Suporte</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">FAQ</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-lg-3">
-                    <h4 class="text-white fw-bold mb-3">Redes Sociais</h4>
-                    <div class="d-flex gap-2">
-                        <a href="" class="footer-link"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
-                        <a href="" class="footer-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
-                        <!-- TODO: Decide wether or not to use old twitter icon -->
-                        <!-- <a href=""><i class="fa-brands fa-x-twitter"></i></a> -->
-                        <a href="" class="footer-link"><i class="fa-brands fa-instagram fa-lg"></i></a>
-                        <a href="" class="footer-link"><i class="fa-brands fa-youtube fa-lg"></i></a>
-                        <a href="" class="footer-link"><i class="fa-brands fa-twitch fa-lg"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="copyright text-center">
-                <span>&copy; 2025 GameVerse. Todos os direitos reservados.</span>
-            </div>
+        <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarToggler">
+          <ul class="navbar-nav mx-auto mb-3 mb-lg-0 py-3 py-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="/page_games/">Jogos</a></li>
+            <li class="nav-item"><a class="nav-link" href="/page_events/">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="/page_forum/">Fórum</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button class="btn btn-login flex-fill" type="submit">
+              <i class="fa-regular fa-user me-2"></i>Entrar
+            </button>
+          </form>
         </div>
-    </footer>
+      </div>
+    </nav>
+  </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  <main>
+    <section id="page-header" class="py-7">
+      <div class="container-xxl mx-auto px-3">
+        <div class="d-flex align-items-center">
+          <div class="flex-fill">
+            <h1 class="text-white fw-light mb-3">Contacto</h1>
+            <p class="m-0 fs-5">Caso tenha alguma questão, entre em contacto connosco.</p>
+          </div>
+          <div>
+            <button class="btn btn-new-topic" type="button">
+              <i class="fa-regular fa-plus me-2"></i>Novo Tópico
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- MAPA -->
+    <section class="py-5">
+      <div class="container-xxl mx-auto px-3">
+        <h2 class="text-white fw-light mb-3">Onde estamos</h2>
+        <div id="map" aria-label="Mapa" role="region"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LOCAIS -->
+  <section class="py-4">
+    <div class="container-xxl mx-auto px-3">
+      <div class="mb-3">
+        <h3 class="text-white fw-light m-0">Os nossos locais</h3>
+        <p class="text-secondary m-0">
+          Temos vários espaços gamer onde podes jogar em PC/console, conviver e organizar sessões com amigos.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Portugal -->
+        <div class="col-12 col-lg-6">
+          <div class="country-card h-100">
+            <h4 class="country-title">🇵🇹 Portugal</h4>
+            <p class="country-sub">Gaming lounges e LAN com PCs e área social.</p>
+            <ul class="list-group list-group-flush country-list">
+              <li class="list-group-item bg-transparent place-item" data-place="pt-porto" role="button" tabindex="0" aria-label="Centrar mapa em Porto">
+                <div class="place-row">
+                  <i class="fa-solid fa-location-dot me-2"></i>
+                  <div>
+                    <div class="place-name">Living Around — Porto</div>
+                    <div class="place-desc">Rua da Alegria, 666 · 4000-789 — Porto</div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent place-item" data-place="pt-lisboa" role="button" tabindex="0" aria-label="Centrar mapa em Lisboa">
+                <div class="place-row">
+                  <i class="fa-solid fa-location-dot me-2"></i>
+                  <div>
+                    <div class="place-name">Living Around — Lisboa</div>
+                    <div class="place-desc">Av. da Liberdade, 101 · 1000-123 — Lisboa</div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent place-item" data-place="pt-faro" role="button" tabindex="0" aria-label="Centrar mapa em Faro">
+                <div class="place-row">
+                  <i class="fa-solid fa-location-dot me-2"></i>
+                  <div>
+                    <div class="place-name">Living Around — Faro</div>
+                    <div class="place-desc">Praça Dom Francisco Gomes, 45 · 8000-168 — Faro</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Brasil -->
+        <div class="col-12 col-lg-6">
+          <div class="country-card h-100">
+            <h4 class="country-title">🇧🇷 Brasil</h4>
+            <p class="country-sub">Cafés gamers, arenas e LAN houses com PCs/VR.</p>
+            <ul class="list-group list-group-flush country-list">
+              <li class="list-group-item bg-transparent place-item" data-place="br-fortaleza" role="button" tabindex="0" aria-label="Centrar mapa em Fortaleza">
+                <div class="place-row">
+                  <i class="fa-solid fa-location-dot me-2"></i>
+                  <div>
+                    <div class="place-name">Studio Games — Fortaleza (Iguatemi Bosque)</div>
+                    <div class="place-desc">Av. Washington Soares, 85 — Fortaleza, CE</div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent place-item" data-place="br-sao-paulo" role="button" tabindex="0" aria-label="Centrar mapa em São Paulo">
+                <div class="place-row">
+                  <i class="fa-solid fa-location-dot me-2"></i>
+                  <div>
+                    <div class="place-name">Full House Gaming — São Paulo (Santana)</div>
+                    <div class="place-desc">R. Dr. João Batista Soares de Faria, 41 — São Paulo, SP</div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item bg-transparent place-item" data-place="br-rio" role="button" tabindex="0" aria-label="Centrar mapa em Rio de Janeiro">
+                <div class="place-row">
+                  <i class="fa-solid fa-location-dot me-2"></i>
+                  <div>
+                    <div class="place-name">Arena Games — Rio de Janeiro (Bonsucesso)</div>
+                    <div class="place-desc">Rua Um, 20 — Rio de Janeiro, RJ</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       CONTACT FORM
+       ========================= -->
+  <div class="contact1">
+    <div class="container-contact1">
+      <div class="contact1-pic js-tilt" data-tilt>
+        <img src="./envelope.png" alt="IMG">
+      </div>
+
+      <form id="contact-form" class="contact1-form validate-form">
+        <span class="contact1-form-title text-white">Get in touch</span>
+
+        <div class="wrap-input1 validate-input" data-validate="Name is required">
+          <input class="input1" type="text" name="name" placeholder="Nome" required>
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+          <input class="input1" type="email" name="email" placeholder="Email" required>
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate="Subject is required">
+          <input class="input1" type="text" name="subject" placeholder="Assunto" required>
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate="Message is required">
+          <textarea class="input1" name="message" placeholder="Escreva a sua mensagem aqui" required></textarea>
+          <span class="shadow-input1"></span>
+        </div>
+
+        <input type="text" name="_gotcha" style="display:none">
+
+        <div class="container-contact1-form-btn">
+          <button class="contact1-form-btn" type="submit">
+            <span>Send Email <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+          </button>
+        </div>
+
+        <p id="form-status" style="margin-top:12px;"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container-xxl py-5 px-3">
+      <div class="row justify-content-between gy-4">
+        <div class="col-12 col-lg-3">
+          <span class="navbar-brand text-white text-uppercase" href="#">Game<em>verse</em></span>
+          <p class="mt-3 mt-lg-0">A comunidade gamer definitiva. Conecte-se, jogue e compete com jogadores de todo o mundo.</p>
+        </div>
+        <div class="col-12 col-lg-3">
+          <h4 class="text-white fw-bold mb-3">Links Rápidos</h4>
+          <ul class="p-0 m-0">
+            <li class="mb-2"><a class="footer-link" href="">Início</a></li>
+            <li class="mb-2"><a class="footer-link" href="">Jogos</a></li>
+            <li class="mb-2"><a class="footer-link" href="">Eventos</a></li>
+            <li class="mb-2"><a class="footer-link" href="">Fórum</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-3">
+          <h4 class="text-white fw-bold mb-3">Comunidade</h4>
+          <ul class="p-0 m-0">
+            <li class="mb-2"><a class="footer-link" href="">Regras</a></li>
+            <li class="mb-2"><a class="footer-link" href="">Suporte</a></li>
+            <li class="mb-2"><a class="footer-link" href="">FAQ</a></li>
+            <li class="mb-2"><a class="footer-link" href="">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-3">
+          <h4 class="text-white fw-bold mb-3">Redes Sociais</h4>
+          <div class="d-flex gap-2">
+            <a href="" class="footer-link"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+            <a href="" class="footer-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            <a href="" class="footer-link"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href="" class="footer-link"><i class="fa-brands fa-youtube fa-lg"></i></a>
+            <a href="" class="footer-link"><i class="fa-brands fa-twitch fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright text-center">
+        <span>&copy; 2025 GameVerse. Todos os direitos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS libs -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/select2/select2.min.js"></script>
+  <script src="vendor/tilt/tilt.jquery.min.js"></script>
+  <script> $('.js-tilt').tilt({ scale: 1.1 }); </script>
+
+  <!-- Google Analytics (opcional) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config', 'UA-23581568-13');
+  </script>
+
+  <!-- Project JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin></script>
+
+  <!-- MAPA + INTERAÇÃO -->
+  <script>
+    const map = L.map('map', { scrollWheelZoom: true });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    const markersPT = {
+      'Porto': L.marker([41.1574902, -8.6018518]).bindPopup('<b>Living Around — Porto</b><br>Rua da Alegria, 666'),
+      'Lisboa': L.marker([38.7223, -9.1393]).bindPopup('<b>Living Around — Lisboa</b><br>Av. da Liberdade, 101'),
+      'Faro': L.marker([37.0194, -7.9322]).bindPopup('<b>Living Around — Faro</b><br>Praça Dom Francisco Gomes, 45')
+    };
+    const fortaleza = L.marker([-3.755545, -38.488706]).bindPopup('<b>Studio Games — Fortaleza</b><br>Iguatemi Bosque');
+    const saoPaulo = L.marker([-23.50105, -46.62402]).bindPopup('<b>Full House Gaming — São Paulo</b><br>Santana, SP');
+    const rio = L.marker([-22.8671, -43.2502]).bindPopup('<b>Arena Games — Rio de Janeiro</b><br>Bonsucesso, RJ');
+
+    const ALL = [...Object.values(markersPT), fortaleza, saoPaulo, rio];
+    const bounds = L.latLngBounds([]);
+    ALL.forEach(mk => { mk.addTo(map); bounds.extend(mk.getLatLng()); });
+    if (bounds.isValid()) map.fitBounds(bounds.pad(0.12)); else map.setView([40.722, -8.394], 6);
+
+    window.addEventListener('load', () => setTimeout(() => map.invalidateSize(), 200));
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const markersByKey = {
+        'pt-porto': markersPT['Porto'],
+        'pt-lisboa': markersPT['Lisboa'],
+        'pt-faro':   markersPT['Faro'],
+        'br-fortaleza': fortaleza,
+        'br-sao-paulo': saoPaulo,
+        'br-rio': rio
+      };
+
+      function focusPlace(el) {
+        const key = el.getAttribute('data-place');
+        const mk = markersByKey[key];
+        if (!mk) return;
+        const ll = mk.getLatLng();
+        map.flyTo(ll, 13, { animate: true, duration: 1.2 });
+        setTimeout(() => mk.openPopup(), 800);
+        document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      document.querySelectorAll('.place-item[data-place]').forEach(li => {
+        li.addEventListener('click', () => focusPlace(li));
+        li.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); focusPlace(li); }
+        });
+      });
+    });
+  </script>
+
+  <!-- EmailJS SDK + init -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init({ publicKey: 'ThuNHCZmdbg_bfRDC' });
+  </script>
+
+  <!-- Submit do formulário: envia APENAS para o utilizador (auto-resposta) -->
+  <script>
+    (function () {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+
+      if (!form) return;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        if (status) { status.style.color = ''; status.textContent = 'Enviando...'; }
+
+        // Bloqueia bots simples
+        if (form._gotcha && form._gotcha.value) {
+          if (status) { status.style.color = '#ff8080'; status.textContent = 'Spam bloqueado.'; }
+          return;
+        }
+
+        // 2) Coleta dados
+        const name = form.name.value.trim() || 'Gamer';
+        const email = form.email.value.trim();
+        const subject = form.subject.value.trim() || 'Mensagem recebida — GameVerse';
+        const message = form.message.value.trim();
+
+        if (!email) {
+          if (status) { status.style.color = '#ff8080'; status.textContent = 'Coloca um e-mail válido.'; }
+          return;
+        }
+
+        // 3) Envia via EmailJS (PRECISAS do service_id e template_id)
+        try {
+          await emailjs.send('service_9ffn7kk', 'template_ls8tggb', {
+            to_name:   name,
+            to_email:  email,     // usa isto no campo "To" do template: {{to_email}}
+            subject:   subject,
+            message:   `Olá ${name}! 👋\n\nRecebemos a sua mensagem:\n\n"${message}"\n\nObrigado por contactar o GameVerse. Responderemos em breve!\n\nAbraço,\nEquipa GameVerse 🎮`,
+            site_name: 'GameVerse'
+          });
+
+          form.reset();
+          if (status) { status.style.color = '#7CFC90'; status.textContent = 'Tudo certo! Enviámos um e-mail de confirmação para ti.'; }
+
+        } catch (err) {
+          console.error('Falha EmailJS:', err);
+          if (status) { status.style.color = '#ff8080'; status.textContent = 'Não foi possível enviar o e-mail agora. Tenta novamente.'; }
+        }
+      });
+    })();
+  </script>
 </body>
-
 </html>
