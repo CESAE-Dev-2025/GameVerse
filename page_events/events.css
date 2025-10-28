@@ -16,6 +16,11 @@
         background-color: var(--color-yellow-500);
     }
 }
+.multi-collapse {
+    &.collapsing {
+        transition: none;
+    }
+}
 #past-events {
     & .card {
         background-color: var(--background-content);
@@ -40,7 +45,7 @@
         background-color: transparent;
         color: var(--color-slate-400);
         border-color: var(--color-slate-400);
-        &:hover{
+        &:hover {
             color: var(--accent-foreground);
             background-color: var(--color-slate-800);
         }
