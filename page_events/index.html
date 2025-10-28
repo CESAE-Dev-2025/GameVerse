@@ -64,6 +64,48 @@
             </div>
         </section>
 
+        <section id="events">
+            <div class="container-xxl mx-auto px-3 py-7">
+                <div id="btn-events" class="btn-group p-1" role="switch">
+                    <button id="btn-next-events" class="btn btn-events rounded-pill active" type="button"
+                        data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"
+                        aria-controls="next-events past-events" onclick="toggleActive()">Próximos Eventos</button>
+
+                    <button id="btn-past-events" class="btn btn-events rounded-pill" type="button"
+                        data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"
+                        aria-controls="next-events past-events" onclick="toggleActive()">Eventos Passados</button>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-xxl mx-auto px-3 py-7">
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse show" id="next-events">
+                            <div class="card card-body">
+                                <h5>Próximos Eventos</h5>
+                                Some placeholder content for the first collapse component of this multi-collapse
+                                example. This panel is hidden by default but revealed when the user activates the
+                                relevant trigger.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="past-events">
+                            <div class="card card-body">
+                                <h5>Eventos Passados</h5>
+                                Some placeholder content for the second collapse component of this multi-collapse
+                                example. This panel is hidden by default but revealed when the user activates the
+                                relevant trigger.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="month-agenda" class="py-7">
             <div class="container-xxl mx-auto px-3">
                 <h2 class="text-white fw-light">Cronograma do Mês</h2>
@@ -162,6 +204,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script>
+        function toggleActive() {
+            const pastEventBtn = document.getElementById("btn-past-events");
+            const nextEventBtn = document.getElementById("btn-next-events");
+            pastEventBtn.classList.toggle("active");
+            nextEventBtn.classList.toggle("active");
+        }
+    </script>
+
 </body>
 
 </html>
