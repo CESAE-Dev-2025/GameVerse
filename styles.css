@@ -7,6 +7,8 @@
     --accent-foreground: #030213;
 
     --color-primary: rgb(240, 177, 0);
+    --color-green-500: rgb(0, 201, 80);
+    --color-red-500: rgb(251, 44, 54);
     --color-yellow-500: rgb(240, 177, 0);
     --color-yellow-600: rgb(208, 135, 0);
     --color-slate-400: rgb(144, 161, 185);
@@ -122,6 +124,9 @@ main {
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
+.fs-7{
+    font-size: 0.75rem;
+}
 /**********************************************************************************************************************/
 /***                                                   Nav styles                                                   ***/
 /**********************************************************************************************************************/
@@ -165,7 +170,7 @@ nav * {
     &:hover {
         background-color: var(--color-yellow-600) !important;
     }
-    & .fa-user {
+    & .bi-person {
         color: var(--color-slate-900) !important;
     }
 }

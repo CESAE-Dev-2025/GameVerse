@@ -21,6 +21,7 @@
         transition: none;
     }
 }
+#next-events,
 #past-events {
     & .card {
         background-color: var(--background-content);
@@ -48,6 +49,44 @@
         &:hover {
             color: var(--accent-foreground);
             background-color: var(--color-slate-800);
+        }
+    }
+}
+#next-events {
+    & .category {
+        padding: 2px 8px !important;
+        line-height: calc(1 / 0.75);
+        background-color: var(--color-yellow-500);
+        color: var(--color-slate-900);
+    }
+    & .status {
+        padding: 2px 8px !important;
+        line-height: calc(1 / 0.75);
+        color: var(--color-slate-900);
+        &.status-open{
+            background-color: var(--color-green-500);
+        }
+        &.status-closed{
+            background-color: var(--color-red-500);
+        }
+
+    }
+    & .bi:not(.bi-people) {
+        color: var(--color-yellow-500);
+    }
+    .detail {
+        color: var(--color-slate-400);
+    }
+    & .attendants {
+        color: var(--color-slate-400);
+    }
+    .btn-enroll {
+        color: var(--color-slate-900) !important;
+        background-color: var(--color-primary);
+        font-size: 14px;
+
+        &:hover {
+            background-color: var(--color-yellow-600) !important;
         }
     }
 }
@@ -84,7 +123,7 @@
     font-size: 0.75rem;
     line-height: calc(1 / 0.75);
 }
-.fa-trophy {
+.bi-trophy {
     font-size: 1.5rem !important;
     color: var(--color-yellow-500) !important;
 }
