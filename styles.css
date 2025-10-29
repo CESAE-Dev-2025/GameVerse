@@ -4,11 +4,17 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
     --font-size: 16px;
+    --accent-foreground: #030213;
 
     --color-primary: rgb(240, 177, 0);
+    --color-green-500: rgb(0, 201, 80);
+    --color-red-500: rgb(251, 44, 54);
     --color-yellow-500: rgb(240, 177, 0);
     --color-yellow-600: rgb(208, 135, 0);
+    --color-slate-300: rgb(202, 213, 226);
     --color-slate-400: rgb(144, 161, 185);
+    --color-slate-500: rgb(98, 116, 142);
+    --color-slate-700: rgb(49, 65, 88);
     --color-slate-800: rgb(29, 41, 61);
     --color-slate-900: rgb(15, 23, 43);
     --color-slate-950: rgb(2, 6, 24);
@@ -120,6 +126,9 @@ main {
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
+.fs-7 {
+    font-size: 0.75rem;
+}
 /**********************************************************************************************************************/
 /***                                                   Nav styles                                                   ***/
 /**********************************************************************************************************************/
@@ -130,7 +139,6 @@ nav {
 nav * {
     color: white !important;
 }
-
 .navbar-brand {
     font-size: 1.5rem;
 }
@@ -164,7 +172,7 @@ nav * {
     &:hover {
         background-color: var(--color-yellow-600) !important;
     }
-    & .fa-user {
+    & .bi-person {
         color: var(--color-slate-900) !important;
     }
 }
@@ -219,6 +227,10 @@ footer {
     text-decoration: none;
     text-transform: none;
     color: inherit;
+
+    & .bi {
+        font-size: 1.25rem;
+    }
 
     &:hover {
         color: var(--color-yellow-500);

@@ -1,11 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameVerse | Fórum</title>
+
+    <!-- Add Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Add Fontawesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="forum.css">
 </head>
+
+
 <body>
-    
+    <header>
+        <!-- TODO: Change hamburguer menu color to white -->
+        <nav class="navbar fixed-top navbar-expand-lg py-3">
+            <div class="container-xxl mx-auto px-auto">
+                <a class="navbar-brand text-uppercase" href="#">Game<em>verse</em></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarToggler">
+                    <ul class="navbar-nav mx-auto mb-3 mb-lg-0 py-3 py-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/page_games/">Jogos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/page_events/">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/page_forum/">Fórum</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <!-- TODO: Add magnifier glass to show search bar -->
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" /> -->
+                        <button class="btn btn-login flex-fill" type="submit"><i
+                                class="bi bi-person me-2"></i>Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="page-header" class="py-7">
+            <div class="container-xxl mx-auto px-3">
+                <div class="d-flex flex-column gap-3 flex-md-row align-items-start align-items-md-center">
+                    <div class="flex-fill">
+                        <h1 class="text-white fw-light mb-3">Fórum da Comunidade</h1>
+                        <p class="m-0 fs-5">Compartilhe estratégias, faça perguntas e conecte-se com outros jogadores
+                        </p>
+                    </div>
+
+                    <button class="btn btn-new-topic text-nowrap" type="submit"><i class="bi bi-plus me-2"></i>
+                        Novo Tópico</button>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container-xxl mx-auto px-3 py-7">
+            <div class="d-flex flex-column flex-md-row px-0 gap-4">
+                <aside id="forum-menu">
+
+                    <div id="forum-categories"
+                        class="mb-4 p-4 rounded-4 d-flex flex-column gap-4 justify-content-between">
+                        <h3 class="text-white fs-6 mb-3">Categorias</h3>
+
+                        <div>
+                            <div class="category d-flex justify-content-between mb-2 rounded-3 align-items-center">
+                                <span><span class="me-1">&#x1F4AC;</span> Todos</span><span
+                                    class="badge rounded-3">245</span>
+                            </div>
+
+                            <div class="category d-flex justify-content-between mb-2 rounded-3 align-items-center">
+                                <span><span class="me-1">&#x1F3AF;</span>Battle Arena</span><span
+                                    class="badge rounded-3">89</span>
+                            </div>
+
+                            <div class="category d-flex justify-content-between mb-2 rounded-3 align-items-center">
+                                <span><span class="me-1">&#x2694;</span>Fantasy Legends</span><span
+                                    class="badge rounded-3">67</span>
+                            </div>
+
+                            <div class="category d-flex justify-content-between mb-2 rounded-3 align-items-center">
+                                <span><span class="me-1">&#x1F916;</span>Cyberpunk Warriors</span><span
+                                    class="badge rounded-3">54</span>
+                            </div>
+
+                            <div class="category d-flex justify-content-between mb-2 rounded-3 align-items-center">
+                                <span><span class="me-1">&#x1F3AE;</span>Geral</span><span
+                                    class="badge rounded-3">35</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="forum-trending"
+                        class="mb-4 p-4 rounded-4 d-flex flex-column gap-4 justify-content-between">
+                        <h3 class="text-white fs-6 mb-3"><i class="bi bi-graph-up-arrow me-2"></i>Em Alta</h3>
+
+                        <div>
+                            <div class="trend">
+                                <p class="m-0 mb-1">Nova temporada de Battle Arena</p>
+                                <p class="stats m-0">234 respostas</p>
+                            </div>
+
+                            <div class="trend">
+                                <p class="m-0 mb-1">Evento especial de Halloween</p>
+                                <p class="stats m-0">189 respostas</p>
+                            </div>
+
+                            <div class="trend">
+                                <p class="m-0 mb-1">Tier list atualizada</p>
+                                <p class="stats m-0">156 respostas</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <section class="flex-fill">
+                    <div id="btn-topics" class="btn-group p-1" role="switch">
+                        <button id="btn-recent-topics" class="btn btn-topics rounded-pill active" type="button"
+                            data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"
+                            aria-controls="recent-topics trending-topics" onclick="toggleActiveTopics()"><i
+                                class="bi bi-clock me-2"></i> Recentes</button>
+
+                        <button id="btn-trending-topics" class="btn btn-topics rounded-pill" type="button"
+                            data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"
+                            aria-controls="recent-topics trending-topics" onclick="toggleActiveTopics()"><i
+                                class="bi bi-graph-up-arrow me-2"></i>Populares</button>
+                    </div>
+
+                    <div class="collapse multi-collapse show" id="recent-topics">
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium fixed">Fixado</span>
+                                        <span class="badge rounded-3 fw-medium">Battle Arena</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Melhores estratégias para
+                                        Battle Arena ranked</h5>
+                                    <p class="card-text mb-2">Pessoal, depois de jogar ranked por 200 horas, compilei as
+                                        melhores estratégias...</p>
+                                    <p class="card-text"><span>por</span> GameMaster99 <span>· 5 min atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>45</span>
+                                        <span><i class="bi bi-eye me-2"></i>1203</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium">Fantasy Legends</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Build mais OP para mage em
+                                        Fantasy Legends</h5>
+                                    <p class="card-text mb-2">Descobri uma combinação de itens que deixa o mage
+                                        absurdamente forte...</p>
+                                    <p class="card-text"><span>por</span> MagicUser <span>· 15 min atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>32</span>
+                                        <span><i class="bi bi-eye me-2"></i>876</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>67</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium">Cyberpunk Warriors</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Dicas para iniciantes no
+                                        Cyberpunk Warriors</h5>
+                                    <p class="card-text mb-2">Se você acabou de começar, essas dicas vão te ajudar
+                                        muito...</p>
+                                    <p class="card-text"><span>por</span> CyberNinja <span>· 1 hora atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>28</span>
+                                        <span><i class="bi bi-eye me-2"></i>654</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>43</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium fixed">Fixado</span>
+                                        <span class="badge rounded-3 fw-medium">Geral</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Discussão: Qual o melhor jogo
+                                        competitivo de 2025?</h5>
+                                    <p class="card-text mb-2">Vamos discutir qual jogo tem o melhor cenário competitivo
+                                        este ano...</p>
+                                    <p class="card-text"><span>por</span> ProGamer <span>· 2 horas atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>156</span>
+                                        <span><i class="bi bi-eye me-2"></i>3421</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>234</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium">Battle Arena</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Tutorial: Como melhorar seu aim
+                                        no Battle Arena</h5>
+                                    <p class="card-text mb-2">Depois de 500 horas de treino, compartilho meus métodos...
+                                    </p>
+                                    <p class="card-text"><span>por</span> HeadshotKing <span>· 3 horas atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>67</span>
+                                        <span><i class="bi bi-eye me-2"></i>1876</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>145</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium">Fantasy Legends</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Patch notes - O que mudou na
+                                        última atualização?</h5>
+                                    <p class="card-text mb-2">Resumo completo das mudanças do patch 2.4.1...</p>
+                                    <p class="card-text"><span>por</span> NewsBot <span>· 5 horas atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>45</span>
+                                        <span><i class="bi bi-eye me-2"></i>1203</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 collapse multi-collapse" id="trending-topics">
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium fixed">Fixado</span>
+                                        <span class="badge rounded-3 fw-medium">Geral</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Discussão: Qual o melhor jogo
+                                        competitivo de 2025?</h5>
+                                    <p class="card-text mb-2">Vamos discutir qual jogo tem o melhor cenário competitivo
+                                        este ano...</p>
+                                    <p class="card-text"><span>por</span> ProGamer <span>· 2 horas atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>156</span>
+                                        <span><i class="bi bi-eye me-2"></i>3421</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>234</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium">Battle Arena</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Tutorial: Como melhorar seu aim
+                                        no Battle Arena</h5>
+                                    <p class="card-text mb-2">Depois de 500 horas de treino, compartilho meus métodos...
+                                    </p>
+                                    <p class="card-text"><span>por</span> HeadshotKing <span>· 3 horas atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>67</span>
+                                        <span><i class="bi bi-eye me-2"></i>1876</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>145</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium fixed">Fixado</span>
+                                        <span class="badge rounded-3 fw-medium">Battle Arena</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Melhores estratégias para
+                                        Battle Arena ranked</h5>
+                                    <p class="card-text mb-2">Pessoal, depois de jogar ranked por 200 horas, compilei as
+                                        melhores estratégias...</p>
+                                    <p class="card-text"><span>por</span> GameMaster99 <span>· 5 min atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>45</span>
+                                        <span><i class="bi bi-eye me-2"></i>1203</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium">Fantasy Legends</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Build mais OP para mage em
+                                        Fantasy Legends</h5>
+                                    <p class="card-text mb-2">Descobri uma combinação de itens que deixa o mage
+                                        absurdamente forte...</p>
+                                    <p class="card-text"><span>por</span> MagicUser <span>· 15 min atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>32</span>
+                                        <span><i class="bi bi-eye me-2"></i>876</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>67</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium">Cyberpunk Warriors</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Dicas para iniciantes no
+                                        Cyberpunk Warriors</h5>
+                                    <p class="card-text mb-2">Se você acabou de começar, essas dicas vão te ajudar
+                                        muito...</p>
+                                    <p class="card-text"><span>por</span> CyberNinja <span>· 1 hora atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>28</span>
+                                        <span><i class="bi bi-eye me-2"></i>654</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>43</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-4 mb-3 fex-fill">
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="https://picsum.photos/48" class="rounded-circle" alt="...">
+                                <div class="card-body p-0">
+                                    <div class="mb-1">
+                                        <span class="badge rounded-3 fw-medium">Fantasy Legends</span>
+                                    </div>
+                                    <h5 class="card-title text-white mb-1 fw-light fs-5">Patch notes - O que mudou na
+                                        última atualização?</h5>
+                                    <p class="card-text mb-2">Resumo completo das mudanças do patch 2.4.1...</p>
+                                    <p class="card-text"><span>por</span> NewsBot <span>· 5 horas atrás</span></p>
+                                    <div class="stats mt-3 d-flex gap-3">
+                                        <span><i class="bi bi-chat-left me-2"></i>45</span>
+                                        <span><i class="bi bi-eye me-2"></i>1203</span>
+                                        <span><i class="bi bi-hand-thumbs-up me-2"></i>89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="">
+        <div class="container-xxl py-5 px-3">
+            <div class="row justify-content-between gy-4">
+                <div class="col-12 col-lg-3">
+                    <span class="navbar-brand text-white text-uppercase" href="#">Game<em>verse</em></span>
+                    <p class="mt-3 mt-lg-0">A comunidade gamer definitiva. Conecte-se, jogue e compete com jogadores de
+                        todo o mundo.</p>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h4 class="text-white fw-bold mb-3">Links Rápidos</h4>
+                    <ul class="p-0 m-0">
+                        <li class="mb-2"><a class="footer-link" href="">Início</a></li>
+                        <li class="mb-2"><a class="footer-link" href="">Jogos</a></li>
+                        <li class="mb-2"><a class="footer-link" href="">Eventos</a></li>
+                        <li class="mb-2"><a class="footer-link" href="">Fórum</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h4 class="text-white fw-bold mb-3">Comunidade</h4>
+                    <ul class="p-0 m-0">
+                        <li class="mb-2"><a class="footer-link" href="">Regras</a></li>
+                        <li class="mb-2"><a class="footer-link" href="">Suporte</a></li>
+                        <li class="mb-2"><a class="footer-link" href="">FAQ</a></li>
+                        <li class="mb-2"><a class="footer-link" href="">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h4 class="text-white fw-bold mb-3">Redes Sociais</h4>
+                    <div class="d-flex gap-3">
+                        <a href="" class="footer-link"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                        <a href="" class="footer-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                        <!-- TODO: Decide wether or not to use old twitter icon -->
+                        <!-- <a href=""><i class="fa-brands fa-x-twitter"></i></a> -->
+                        <a href="" class="footer-link"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="" class="footer-link"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                        <a href="" class="footer-link"><i class="fa-brands fa-twitch fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright text-center">
+                <span>&copy; 2025 GameVerse. Todos os direitos reservados.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function toggleActiveTopics() {
+            const recentTopicsBtn = document.getElementById("btn-recent-topics");
+            const trendingTopicsBtn = document.getElementById("btn-trending-topics");
+            recentTopicsBtn.classList.toggle("active");
+            trendingTopicsBtn.classList.toggle("active");
+        }
+    </script>
+
 </body>
+
 </html>

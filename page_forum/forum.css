@@ -1,0 +1,121 @@
+/**********************************************************************************************************************/
+/***                                               Page header styles                                               ***/
+/**********************************************************************************************************************/
+.btn-new-topic {
+    color: var(--color-slate-900) !important;
+    background-color: var(--color-primary);
+    font-size: 14px;
+
+    &:hover {
+        background-color: var(--color-yellow-600) !important;
+    }
+}
+/**********************************************************************************************************************/
+
+/**********************************************************************************************************************/
+/***                                                   Aside styles                                                ***/
+/**********************************************************************************************************************/
+#forum-categories,
+#forum-trending {
+    background-color: var(--background-content);
+    border: 1px solid var(--color-slate-800);
+
+    & .category {
+        padding: 0.75rem;
+        color: var(--color-slate-300);
+
+        & .badge {
+            border: 1px solid var(--color-slate-700);
+            color: var(--color-slate-400);
+        }
+
+        &:hover {
+            background-color: var(--color-slate-800);
+        }
+    }
+
+    & .bi-graph-up-arrow {
+        color: var(--color-yellow-500);
+    }
+
+    & .trend {
+        padding-bottom: 0.75rem;
+        margin-bottom: 0.75rem;
+        color: var(--color-slate-300) !important;
+        border-bottom: 1px solid var(--color-slate-800);
+
+        &:last-of-type {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        & .stats {
+            font-size: 14px;
+            color: var(--color-slate-500) !important;
+        }
+    }
+}
+/**********************************************************************************************************************/
+
+/**********************************************************************************************************************/
+/***                                              Toggle buttons styles                                             ***/
+/**********************************************************************************************************************/
+.btn-group {
+    border-radius: 1rem !important;
+    margin-bottom: 2rem;
+    background-color: var(--background-content);
+
+    & .btn-topics {
+        background-color: transparent !important;
+        color: var(--color-slate-900) !important;
+
+        &.active {
+            background-color: var(--color-yellow-500) !important;
+        }
+        &:hover {
+            color: inherit;
+            background-color: var(--color-yellow-500);
+        }
+    }
+}
+.multi-collapse {
+    &.collapsing {
+        transition: none;
+    }
+}
+#recent-topics,
+#trending-topics {
+    & .card {
+        border-radius: 1rem !important;
+        background-color: var(--background-content);
+        border: 1px solid var(--color-slate-800);
+
+        & .badge {
+            padding: 2px 8px !important;
+            line-height: calc(1 / 0.75);
+            color: var(--color-slate-400);
+            border: 1px solid var(--color-slate-700);
+
+            &.fixed {
+                background-color: var(--color-yellow-500);
+                color: var(--color-slate-900);
+            }
+        }
+
+        & .card-text {
+            color: var(--color-slate-400);
+            font-size: 0.875rem;
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
+            & span {
+                color: var(--color-slate-500);
+            }
+        }
+
+        & .stats{
+            color: var(--color-slate-400);
+        }
+    }
+}
+/**********************************************************************************************************************/
