@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarToggler">
                     <ul class="navbar-nav mx-auto mb-3 mb-lg-0 py-3 py-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/index.html">Início</a>
+                            <a class="nav-link " aria-current="page" href="/index.html">Início</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/page_games/">Jogos</a>
@@ -47,7 +47,8 @@
                         <!-- TODO: Add magnifier glass to show search bar -->
                         <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" /> -->
                         <button class="btn btn-login flex-fill" type="submit"><i class="fa-regular fa-user me-2"></i>
-                            Entrar</button>
+                           <a href="../user_page/login.html" class="text-warning text-decoration-none text-dark">Entrar</a>
+                            </button>
                     </form>
                 </div>
             </div>
@@ -59,67 +60,223 @@
   <h2 class="text-center mb-4 text-warning text-uppercase">Catálogo de Jogos</h2>
 
   <div class="row g-4">
+    <!-- Card base -->
+    <div class="col-12 col-md-3" >
+      <div class="card-jogo bg-dark text-light">
+        <img src="../images/cyberwarriors.jpg" class="img-fluid rounded-top" alt="Cyberpunk Warriors">
+        <span class="badge-top">RPG/Ação</span>
+        <div class="p-3">
+          <h5>Cyberpunk Warriors</h5>
+          <p class="text-secondary small">Explore um mundo cyberpunk futurista e envolvente.</p>
+          <div class="info mb-2">
+            <span><i class="bi bi-people-fill"></i> 2.5M</span>
+            <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+          </div>
+          <div class="mb-3">
+            <span class="badge bg-secondary">PC</span>
+            <span class="badge bg-secondary">PS5</span>
+            <span class="badge bg-secondary">Xbox</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning flex-grow-1">
+              <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i class="bi bi-download"></i> Baixar</a>
+              
+            </button>
+            <button class="btn btn-outline-secondary">
+              <a href="game_description.html" class="text-decoration-none text-light"> <i class="bi bi-box-arrow-up-right"></i></a>
+             
+            </button>
+          </div>
+        </div>
+      </div>
+      </div>
+
     <div class="col-12 col-md-3">
-      <div class="jogo text-center p-3 bg-dark rounded shadow-sm">
-        <img src="../images/cyberwarriors.jpg" alt="Cyberpunk Warriors" class="img-fluid rounded mb-3">
-        <h4 class="text-light">Cyberpunk Warriors</h4>
-        <p class="text-secondary">RPG • 2300 jogadores</p>
+      <div class="card-jogo bg-dark text-light">
+        <img src="../images/fantasy-legends.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+        <span class="badge-top">MMORPG</span>
+        <div class="p-3">
+          <h5>Fantasy Legends</h5>
+          <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+          <div class="info mb-2">
+            <span><i class="bi bi-people-fill"></i> 1.8M</span>
+            <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+          </div>
+          <div class="mb-3">
+            <span class="badge bg-secondary">PC</span>
+            <span class="badge bg-secondary">Mobile</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning flex-grow-1">
+             <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i class="bi bi-download"></i> Baixar</a>
+            </button>
+            <button class="btn btn-outline-secondary">
+               <a href="game_description.html" class="text-decoration-none text-light"> <i class="bi bi-box-arrow-up-right"></i></a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="col-12 col-md-3">
-      <div class="jogo text-center p-3 bg-dark rounded shadow-sm">
-        <img src="../images/fantasy-legends.png" alt="Fantasy Legends" class="img-fluid rounded mb-3">
-        <h4 class="text-light">Fantasy Legends</h4>
-        <p class="text-secondary">MMORPG • 3100 jogadores</p>
+      <div class="card-jogo bg-dark text-light">
+        <img src="../images/battle-arena.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+        <span class="badge-top">MMORPG</span>
+        <div class="p-3">
+          <h5>Battle Arena</h5>
+          <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+          <div class="info mb-2">
+            <span><i class="bi bi-people-fill"></i> 1.8M</span>
+            <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+          </div>
+          <div class="mb-3">
+            <span class="badge bg-secondary">PC</span>
+            <span class="badge bg-secondary">Mobile</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning flex-grow-1">
+              <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i class="bi bi-download"></i> Baixar</a>
+            </button>
+            <button class="btn btn-outline-secondary">
+               <a href="game_description.html" class="text-decoration-none text-light"> <i class="bi bi-box-arrow-up-right"></i></a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="col-12 col-md-3">
-      <div class="jogo text-center p-3 bg-dark rounded shadow-sm">
-        <img src="../images/battle-arena.png" alt="Battle Arena" class="img-fluid rounded mb-3">
-        <h4 class="text-light">Battle Arena</h4>
-        <p class="text-secondary">FPS • 2850 jogadores</p>
+      <div class="card-jogo bg-dark text-light">
+        <img src="../images/index-hero-bg.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+        <span class="badge-top">MMORPG</span>
+        <div class="p-3">
+          <h5>Roman Empire</h5>
+          <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+          <div class="info mb-2">
+            <span><i class="bi bi-people-fill"></i> 1.8M</span>
+            <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+          </div>
+          <div class="mb-3">
+            <span class="badge bg-secondary">PC</span>
+            <span class="badge bg-secondary">Mobile</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning flex-grow-1">
+              <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i class="bi bi-download"></i> Baixar</a>
+            </button>
+            <button class="btn btn-outline-secondary">
+               <a href="game_description.html" class="text-decoration-none text-light"> <i class="bi bi-box-arrow-up-right"></i></a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="col-12 col-md-3">
-      <div class="jogo text-center p-3 bg-dark rounded shadow-sm">
-        <img src="../images/index-hero-bg.png" alt="Stellar Racers" class="img-fluid rounded mb-3">
-        <h4 class="text-light">Roman Empire</h4>
-        <p class="text-secondary">Corrida Espacial • 1950 jogadores</p>
+      <div class="card-jogo bg-dark text-light">
+        <img src="../images/racing-legends.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+        <span class="badge-top">MMORPG</span>
+        <div class="p-3">
+          <h5>Racing Legends</h5>
+          <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+          <div class="info mb-2">
+            <span><i class="bi bi-people-fill"></i> 1.8M</span>
+            <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+          </div>
+          <div class="mb-3">
+            <span class="badge bg-secondary">PC</span>
+            <span class="badge bg-secondary">Mobile</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning flex-grow-1">
+              <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i class="bi bi-download"></i> Baixar</a>
+            </button>
+            <button class="btn btn-outline-secondary">
+               <a href="game_description.html" class="text-decoration-none text-light"> <i class="bi bi-box-arrow-up-right"></i></a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="col-12 col-md-3">
-      <div class="jogo text-center p-3 bg-dark rounded shadow-sm">
-        <img src="../images/racing-legends.png" alt="Kingdom Conquest" class="img-fluid rounded mb-3">
-        <h4 class="text-light">Kingdom Conquest</h4>
-        <p class="text-secondary">Estratégia • 2700 jogadores</p>
+      <div class="card-jogo bg-dark text-light">
+        <img src="../images/space-conquest-v2.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+        <span class="badge-top">MMORPG</span>
+        <div class="p-3">
+          <h5>Space Conquest</h5>
+          <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+          <div class="info mb-2">
+            <span><i class="bi bi-people-fill"></i> 1.8M</span>
+            <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+          </div>
+          <div class="mb-3">
+            <span class="badge bg-secondary">PC</span>
+            <span class="badge bg-secondary">Mobile</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning flex-grow-1">
+             <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i class="bi bi-download"></i> Baixar</a>
+            </button>
+            <button class="btn btn-outline-secondary">
+               <a href="game_description.html" class="text-decoration-none text-light"> <i class="bi bi-box-arrow-up-right"></i></a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="col-12 col-md-3">
-      <div class="jogo text-center p-3 bg-dark rounded shadow-sm">
-        <img src="../images/space-conquest-v2.png" alt="Dungeon Echoes" class="img-fluid rounded mb-3">
-        <h4 class="text-light">Dungeon Echoes</h4>
-        <p class="text-secondary">Roguelike • 2200 jogadores</p>
+      <div class="card-jogo bg-dark text-light">
+        <img src="../images/space-conquest.jpg" class="img-fluid rounded-top" alt="Fantasy Legends">
+        <span class="badge-top">MMORPG</span>
+        <div class="p-3">
+          <h5>Space Conquest</h5>
+          <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+          <div class="info mb-2">
+            <span><i class="bi bi-people-fill"></i> 1.8M</span>
+            <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+          </div>
+          <div class="mb-3">
+            <span class="badge bg-secondary">PC</span>
+            <span class="badge bg-secondary">Mobile</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning flex-grow-1">
+             <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i class="bi bi-download"></i> Baixar</a>
+            </button>
+            <button class="btn btn-outline-secondary">
+               <a href="game_description.html" class="text-decoration-none text-light"> <i class="bi bi-box-arrow-up-right"></i></a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="col-12 col-md-3">
-      <div class="jogo text-center p-3 bg-dark rounded shadow-sm">
-        <img src="../images/space-conquest.jpg" alt="Overdrive Tactics" class="img-fluid rounded mb-3">
-        <h4 class="text-light">Overdrive Tactics</h4>
-        <p class="text-secondary">Estratégia Tática • 2600 jogadores</p>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-3">
-      <div class="jogo text-center p-3 bg-dark rounded shadow-sm">
-        <img src="../images/survival-island.png" alt="Skyfall Legion" class="img-fluid rounded mb-3">
-        <h4 class="text-light">Skyfall Legion</h4>
-        <p class="text-secondary">Battle Royale • 3400 jogadores</p>
+      <div class="card-jogo bg-dark text-light">
+        <img src="../images/survival-island.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+        <span class="badge-top">MMORPG</span>
+        <div class="p-3">
+          <h5>Space Conquest</h5>
+          <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+          <div class="info mb-2">
+            <span><i class="bi bi-people-fill"></i> 1.8M</span>
+            <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+          </div>
+          <div class="mb-3">
+            <span class="badge bg-secondary">PC</span>
+            <span class="badge bg-secondary">Mobile</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning flex-grow-1">
+             <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i class="bi bi-download"></i> Baixar</a>
+            </button>
+            <button class="btn btn-outline-secondary">
+               <a href="game_description.html" class="text-decoration-none text-light"> <i class="bi bi-box-arrow-up-right"></i></a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -142,7 +299,7 @@
       <h4>Junte-se à Comunidade</h4>
       <p>Visite o nosso <strong>Fórum</strong> e junte-se a um <strong>clã</strong> para conhecer outros jogadores com os mesmos interesses. 
       Partilhe estratégias, combine partidas e participe em desafios exclusivos.</p>
-      <a href="/page_forum/" class="btn-guia">Aceder ao Fórum</a>
+      <a href="/page_forum/index.html" class="btn-guia">Aceder ao Fórum</a>
     </div>
 
     <div class="guia-item">
@@ -150,7 +307,7 @@
       <h4>Personalize o Seu Perfil</h4>
       <p>Crie o seu <strong>perfil gamer</strong> e desbloqueie conquistas ao completar missões semanais. 
       Mostre o seu progresso no ranking e destaque-se entre os melhores jogadores da comunidade.</p>
-      <a href="/page_profile/" class="btn-guia">Criar Perfil</a>
+      <a href="../user_page/registo.html" class="btn-guia">Criar Perfil</a>
     </div>
   </div>
 </section>
@@ -169,31 +326,31 @@
                 <div class="col-12 col-lg-3">
                     <h4 class="text-white fw-bold mb-3">Links Rápidos</h4>
                     <ul class="p-0 m-0">
-                        <li class="mb-2"><a class="footer-link" href="">Início</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Jogos</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Eventos</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Fórum</a></li>
+                        <li class="mb-2"><a class="footer-link" href="../index.html">Início</a></li>
+                        <li class="mb-2"><a class="footer-link" href="/page_games/index.html">Jogos</a></li>
+                        <li class="mb-2"><a class="footer-link" href="/page_events/index.html">Eventos</a></li>
+                        <li class="mb-2"><a class="footer-link" href="/page_forum/index.html">Fórum</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-3">
                     <h4 class="text-white fw-bold mb-3">Comunidade</h4>
                     <ul class="p-0 m-0">
-                        <li class="mb-2"><a class="footer-link" href="">Regras</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Suporte</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">FAQ</a></li>
-                        <li class="mb-2"><a class="footer-link" href="">Contato</a></li>
+                        <li class="mb-2"><a class="footer-link" href="../construction_page/index.html">Regras</a></li>
+                        <li class="mb-2"><a class="footer-link" href="../construction_page/index.html">Suporte</a></li>
+                        <li class="mb-2"><a class="footer-link" href="../construction_page/index.html">FAQ</a></li>
+                        <li class="mb-2"><a class="footer-link" href="../page_contact/index.html">Contato</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-3">
                     <h4 class="text-white fw-bold mb-3">Redes Sociais</h4>
                     <div class="d-flex gap-2">
-                        <a href="" class="footer-link"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
-                        <a href="" class="footer-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                        <a href="https://www.facebook.com/" class="footer-link"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                        <a href="https://x.com/" class="footer-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
                         <!-- TODO: Decide wether or not to use old twitter icon -->
                         <!-- <a href=""><i class="fa-brands fa-x-twitter"></i></a> -->
-                        <a href="" class="footer-link"><i class="fa-brands fa-instagram fa-lg"></i></a>
-                        <a href="" class="footer-link"><i class="fa-brands fa-youtube fa-lg"></i></a>
-                        <a href="" class="footer-link"><i class="fa-brands fa-twitch fa-lg"></i></a>
+                        <a href="https://www.instagram.com/" class="footer-link"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="https://www.youtube.com/" class="footer-link"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                        <a href="https://www.twitch.tv/" class="footer-link"><i class="fa-brands fa-twitch fa-lg"></i></a>
                     </div>
                 </div>
             </div>
