@@ -1,11 +1,404 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameVerse | Catálogo de Jogos</title>
+
+  <!-- Add Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Add Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+  <main>
+    <!-- ===== NAVBAR ===== -->
+    <header>
+      <!-- TODO: Change hamburguer menu color to white -->
+      <nav class="navbar fixed-top navbar-expand-lg py-3">
+        <div class="container-xxl mx-auto px-auto">
+          <a class="navbar-brand text-uppercase" href="#">Game<em>verse</em></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarToggler">
+            <ul class="navbar-nav mx-auto mb-3 mb-lg-0 py-3 py-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="/index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/page_games/">Jogos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/page_events/">Eventos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/page_forum/">Fórum</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <!-- TODO: Add magnifier glass to show search bar -->
+              <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" /> -->
+              <button class="btn btn-login flex-fill" type="submit"><i class="fa-regular fa-user me-2"></i>
+                <a href="../user_page/login.html" class="text-warning text-decoration-none text-dark">Entrar</a>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="page-header" class="py-7">
+      <div class="container-xxl mx-auto px-3">
+        <div class="d-flex flex-column gap-3 flex-md-row align-items-start align-items-md-center">
+          <div class="flex-fill">
+            <h1 class="text-white fw-light mb-3">Catálogo de Jogos</h1>
+            <p class="m-0 fs-5">Descubra os jogos mais populares da comunidade GameVerse</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Catálogo de Jogos ===== -->
+    <section class="catalogo container my-5">
+      <!-- <h2 class="text-center mb-4 text-warning text-uppercase">Catálogo de Jogos</h2> -->
+
+      <div class="row g-4">
+        <!-- Card base -->
+        <div class="col-12 col-md-3">
+          <div class="card-jogo bg-dark text-light">
+            <img src="../images/cyberwarriors.jpg" class="img-fluid rounded-top" alt="Cyberpunk Warriors">
+            <span class="badge-top">RPG/Ação</span>
+            <div class="p-3">
+              <h5>Cyberpunk Warriors</h5>
+              <p class="text-secondary small">Explore um mundo cyberpunk futurista e envolvente.</p>
+              <div class="info mb-2">
+                <span><i class="bi bi-people-fill"></i> 2.5M</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+              </div>
+              <div class="mb-3">
+                <span class="badge bg-secondary">PC</span>
+                <span class="badge bg-secondary">PS5</span>
+                <span class="badge bg-secondary">Xbox</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning flex-grow-1">
+                  <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i
+                      class="bi bi-download"></i> Baixar</a>
+
+                </button>
+                <button class="btn btn-outline-secondary">
+                  <a href="game_description.html" class="text-decoration-none text-light"> <i
+                      class="bi bi-box-arrow-up-right"></i></a>
+
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card-jogo bg-dark text-light">
+            <img src="../images/fantasy-legends.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+            <span class="badge-top">MMORPG</span>
+            <div class="p-3">
+              <h5>Fantasy Legends</h5>
+              <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+              <div class="info mb-2">
+                <span><i class="bi bi-people-fill"></i> 1.8M</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+              </div>
+              <div class="mb-3">
+                <span class="badge bg-secondary">PC</span>
+                <span class="badge bg-secondary">Mobile</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning flex-grow-1">
+                  <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i
+                      class="bi bi-download"></i> Baixar</a>
+                </button>
+                <button class="btn btn-outline-secondary">
+                  <a href="game_description.html" class="text-decoration-none text-light"> <i
+                      class="bi bi-box-arrow-up-right"></i></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card-jogo bg-dark text-light">
+            <img src="../images/battle-arena.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+            <span class="badge-top">MMORPG</span>
+            <div class="p-3">
+              <h5>Battle Arena</h5>
+              <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+              <div class="info mb-2">
+                <span><i class="bi bi-people-fill"></i> 1.8M</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+              </div>
+              <div class="mb-3">
+                <span class="badge bg-secondary">PC</span>
+                <span class="badge bg-secondary">Mobile</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning flex-grow-1">
+                  <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i
+                      class="bi bi-download"></i> Baixar</a>
+                </button>
+                <button class="btn btn-outline-secondary">
+                  <a href="game_description.html" class="text-decoration-none text-light"> <i
+                      class="bi bi-box-arrow-up-right"></i></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card-jogo bg-dark text-light">
+            <img src="../images/index-hero-bg.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+            <span class="badge-top">MMORPG</span>
+            <div class="p-3">
+              <h5>Roman Empire</h5>
+              <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+              <div class="info mb-2">
+                <span><i class="bi bi-people-fill"></i> 1.8M</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+              </div>
+              <div class="mb-3">
+                <span class="badge bg-secondary">PC</span>
+                <span class="badge bg-secondary">Mobile</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning flex-grow-1">
+                  <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i
+                      class="bi bi-download"></i> Baixar</a>
+                </button>
+                <button class="btn btn-outline-secondary">
+                  <a href="game_description.html" class="text-decoration-none text-light"> <i
+                      class="bi bi-box-arrow-up-right"></i></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card-jogo bg-dark text-light">
+            <img src="../images/racing-legends.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+            <span class="badge-top">MMORPG</span>
+            <div class="p-3">
+              <h5>Racing Legends</h5>
+              <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+              <div class="info mb-2">
+                <span><i class="bi bi-people-fill"></i> 1.8M</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+              </div>
+              <div class="mb-3">
+                <span class="badge bg-secondary">PC</span>
+                <span class="badge bg-secondary">Mobile</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning flex-grow-1">
+                  <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i
+                      class="bi bi-download"></i> Baixar</a>
+                </button>
+                <button class="btn btn-outline-secondary">
+                  <a href="game_description.html" class="text-decoration-none text-light"> <i
+                      class="bi bi-box-arrow-up-right"></i></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card-jogo bg-dark text-light">
+            <img src="../images/space-conquest-v2.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+            <span class="badge-top">MMORPG</span>
+            <div class="p-3">
+              <h5>Space Conquest</h5>
+              <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+              <div class="info mb-2">
+                <span><i class="bi bi-people-fill"></i> 1.8M</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+              </div>
+              <div class="mb-3">
+                <span class="badge bg-secondary">PC</span>
+                <span class="badge bg-secondary">Mobile</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning flex-grow-1">
+                  <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i
+                      class="bi bi-download"></i> Baixar</a>
+                </button>
+                <button class="btn btn-outline-secondary">
+                  <a href="game_description.html" class="text-decoration-none text-light"> <i
+                      class="bi bi-box-arrow-up-right"></i></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card-jogo bg-dark text-light">
+            <img src="../images/space-conquest.jpg" class="img-fluid rounded-top" alt="Fantasy Legends">
+            <span class="badge-top">MMORPG</span>
+            <div class="p-3">
+              <h5>Space Conquest</h5>
+              <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+              <div class="info mb-2">
+                <span><i class="bi bi-people-fill"></i> 1.8M</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+              </div>
+              <div class="mb-3">
+                <span class="badge bg-secondary">PC</span>
+                <span class="badge bg-secondary">Mobile</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning flex-grow-1">
+                  <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i
+                      class="bi bi-download"></i> Baixar</a>
+                </button>
+                <button class="btn btn-outline-secondary">
+                  <a href="game_description.html" class="text-decoration-none text-light"> <i
+                      class="bi bi-box-arrow-up-right"></i></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card-jogo bg-dark text-light">
+            <img src="../images/survival-island.png" class="img-fluid rounded-top" alt="Fantasy Legends">
+            <span class="badge-top">MMORPG</span>
+            <div class="p-3">
+              <h5>Space Conquest</h5>
+              <p class="text-secondary small">Aventura épica de fantasia com milhares de jogadores.</p>
+              <div class="info mb-2">
+                <span><i class="bi bi-people-fill"></i> 1.8M</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+              </div>
+              <div class="mb-3">
+                <span class="badge bg-secondary">PC</span>
+                <span class="badge bg-secondary">Mobile</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning flex-grow-1">
+                  <a href="../not_available_page/index.html" class="text-decoration-none text-dark"><i
+                      class="bi bi-download"></i> Baixar</a>
+                </button>
+                <button class="btn btn-outline-secondary">
+                  <a href="game_description.html" class="text-decoration-none text-light"> <i
+                      class="bi bi-box-arrow-up-right"></i></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- ===== Guia para Iniciantes ===== -->
+    <section class="guia">
+      <h3>Guia para Iniciantes</h3>
+      <p class="intro">
+        Se é novo no GameVerse, comece explorando o nosso catálogo e participe de torneios com outros jogadores.
+        Complete missões diárias para subir de nível e ganhar recompensas exclusivas.
+      </p>
+
+      <div class="guia-conteudo">
+        <div class="guia-item">
+          <i class="fa-solid fa-users-line"></i>
+          <h4>Junte-se à Comunidade</h4>
+          <p>Visite o nosso <strong>Fórum</strong> e junte-se a um <strong>clã</strong> para conhecer outros jogadores
+            com os mesmos interesses.
+            Partilhe estratégias, combine partidas e participe em desafios exclusivos.</p>
+          <a href="/page_forum/index.html" class="btn-guia">Aceder ao Fórum</a>
+        </div>
+
+        <div class="guia-item">
+          <i class="fa-solid fa-trophy"></i>
+          <h4>Personalize o Seu Perfil</h4>
+          <p>Crie o seu <strong>perfil gamer</strong> e desbloqueie conquistas ao completar missões semanais.
+            Mostre o seu progresso no ranking e destaque-se entre os melhores jogadores da comunidade.</p>
+          <a href="../user_page/registo.html" class="btn-guia">Criar Perfil</a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="">
+      <div class="container-xxl py-5 px-3">
+        <div class="row justify-content-between gy-4">
+          <div class="col-12 col-lg-3">
+            <span class="navbar-brand text-white text-uppercase" href="#">Game<em>verse</em></span>
+            <p class="mt-3 mt-lg-0">A comunidade gamer definitiva. Conecte-se, jogue e compete com jogadores de
+              todo o mundo.</p>
+          </div>
+          <div class="col-12 col-lg-3">
+            <h4 class="text-white fw-bold mb-3">Links Rápidos</h4>
+            <ul class="p-0 m-0">
+              <li class="mb-2"><a class="footer-link" href="../index.html">Início</a></li>
+              <li class="mb-2"><a class="footer-link" href="/page_games/index.html">Jogos</a></li>
+              <li class="mb-2"><a class="footer-link" href="/page_events/index.html">Eventos</a></li>
+              <li class="mb-2"><a class="footer-link" href="/page_forum/index.html">Fórum</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3">
+            <h4 class="text-white fw-bold mb-3">Comunidade</h4>
+            <ul class="p-0 m-0">
+              <li class="mb-2"><a class="footer-link" href="../construction_page/index.html">Regras</a></li>
+              <li class="mb-2"><a class="footer-link" href="../construction_page/index.html">Suporte</a></li>
+              <li class="mb-2"><a class="footer-link" href="../construction_page/index.html">FAQ</a></li>
+              <li class="mb-2"><a class="footer-link" href="../page_contact/index.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3">
+            <h4 class="text-white fw-bold mb-3">Redes Sociais</h4>
+            <div class="d-flex gap-2">
+              <a href="https://www.facebook.com/" class="footer-link"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+              <a href="https://x.com/" class="footer-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+              <!-- TODO: Decide wether or not to use old twitter icon -->
+              <!-- <a href=""><i class="fa-brands fa-x-twitter"></i></a> -->
+              <a href="https://www.instagram.com/" class="footer-link"><i class="fa-brands fa-instagram fa-lg"></i></a>
+              <a href="https://www.youtube.com/" class="footer-link"><i class="fa-brands fa-youtube fa-lg"></i></a>
+              <a href="https://www.twitch.tv/" class="footer-link"><i class="fa-brands fa-twitch fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright text-center">
+          <span>&copy; 2025 GameVerse. Todos os direitos reservados.</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
 </body>
+
 </html>
