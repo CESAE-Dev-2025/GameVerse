@@ -1,0 +1,29 @@
+ body {
+      background-color: rgb(15, 23, 43);
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn-custom {
+      background-color: rgb(240, 177, 0);
+      border: none;
+      color: black;
+      font-weight: 600;
+    }
+    .btn-custom:hover, .btn-outline-light {
+      background-color: rgb(220, 160, 0);
+    }
+    .card {
+      background-color: #1e2a4a;
+      border: none;
+      border-radius: 1rem;
+      padding: 2rem;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .form-label,h2, .mt-3 {
+        color: white;
+    }
