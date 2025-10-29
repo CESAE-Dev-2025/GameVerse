@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="forum.css">
 </head>
-<!-- TODO: Rever responsividade -->
+
 
 <body>
     <header>
@@ -62,23 +62,22 @@
     <main>
         <section id="page-header" class="py-7">
             <div class="container-xxl mx-auto px-3">
-                <div class="d-flex align-items-center">
+                <div class="d-flex flex-column gap-3 flex-md-row align-items-start align-items-md-center">
                     <div class="flex-fill">
                         <h1 class="text-white fw-light mb-3">Fórum da Comunidade</h1>
                         <p class="m-0 fs-5">Compartilhe estratégias, faça perguntas e conecte-se com outros jogadores
                         </p>
                     </div>
-                    <div>
-                        <button class="btn btn-new-topic" type="submit"><i class="bi bi-plus me-2"></i>
-                            Novo Tópico</button>
-                    </div>
+
+                    <button class="btn btn-new-topic text-nowrap" type="submit"><i class="bi bi-plus me-2"></i>
+                        Novo Tópico</button>
                 </div>
             </div>
         </section>
 
 
         <div class="container-xxl mx-auto px-3 py-7">
-            <div class="d-flex px-0 gap-4">
+            <div class="d-flex flex-column flex-md-row px-0 gap-4">
                 <aside id="forum-menu">
 
                     <div id="forum-categories"
