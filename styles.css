@@ -10,10 +10,12 @@ body {
 .navbar {
   background-color: #10121a;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1rem 3rem;
 }
+
+
 
 .logo span {
   color: #f5c400;
