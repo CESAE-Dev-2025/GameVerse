@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameVerse | Fórum</title>
+    <title>GameVerse | Shop</title>
 
-    <!-- Add Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Add Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -23,7 +21,6 @@
 
 <body style="background: var(--background);">
     <header>
-        <!-- TODO: Change hamburguer menu color to white -->
         <nav class="navbar fixed-top navbar-expand-lg py-3">
             <div class="container-xxl mx-auto px-auto">
                 <a class="navbar-brand text-uppercase" href="#">Game<em>verse</em></a>
@@ -47,10 +44,12 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <!-- TODO: Add magnifier glass to show search bar -->
-                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" /> -->
                         <button class="btn btn-login flex-fill" type="submit"><i class="fa-regular fa-user me-2"></i>
                             Entrar</button>
+                        <button class="btn btn-cart ms-3" type="button" aria-label="Cart">
+                            <i class="fa-solid fa-cart-shopping" style="color: #FFD43B;"></i>
+                            <span class="cart-badge" id="cart-count">0</span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -66,93 +65,69 @@
                 <div class="d-flex align-items-center">
                     <div class="flex-fill">
                         <h1 class="text-white fw-light mb-3">Shop</h1>
-                        <p class="m-0 fs-5">Compartilhe estratégias, faça perguntas e conecte-se com outros jogadores
+                        <p class="m-0 fs-5">Explore os melhores produtos para jogos e adquira equipamentos de alta qualidade para melhorar sua experiência.</p>
                         </p>
                     </div>
-                    <div>
-                        <button class="btn btn-new-topic" type="submit"><i class="fa-regular fa-plus me-2"></i>
-                            Novo Tópico</button>
-                    </div>
+
                 </div>
             </div>
         </section>
     </main>
-
-    <section>
-        <div class="container" style="height: 60vh">
+    <section class="d-flex justify-content-center">
+        <div class="container">
             <div class="card__container">
                 <article class="card__article">
                     <img src="img/headset.png" alt="image" class="card__img">
-
                     <div class="card__data">
-                        <span class="card__description">Vancouver Mountains, Canada</span>
-                        <h2 class="card__title">Auscutadores gaming </h2>
-                        <a href="#" class="card__button">Read More</a>
+                        <h2 class="card__title">Auscutadores gaming</h2>
+                        <button class="btn btn-primary card__button" data-id="headset">Buy Now</button>
                     </div>
                 </article>
 
                 <article class="card__article">
                     <img src="img/chair.png" alt="image" class="card__img">
-
                     <div class="card__data">
-                        <span class="card__description">Poon Hill, Nepal</span>
                         <h2 class="card__title">Starry Night</h2>
-                        <a href="#" class="card__button">Read More</a>
+                        <button class="btn btn-primary card__button" data-id="chair">Buy Now</button>
                     </div>
                 </article>
 
                 <article class="card__article">
                     <img src="img/keyboard.png" alt="image" class="card__img">
-
                     <div class="card__data">
-                        <span class="card__description">Bojcin Forest, Serbia</span>
                         <h2 class="card__title">Path Of Peace</h2>
-                        <a href="#" class="card__button">Read More</a>
+                        <button class="btn btn-primary card__button" data-id="keyboard">Buy Now</button>
                     </div>
                 </article>
             </div>
-        </div>
 
-
-
-
-        <div class="container" style="height: 60vh">
             <div class="card__container">
                 <article class="card__article">
                     <img src="img/mouse.png" alt="image" class="card__img">
-
                     <div class="card__data">
-                        <span class="card__description">Vancouver Mountains, Canada</span>
                         <h2 class="card__title">Rato Gaming</h2>
-                        <a href="#" class="card__button">Read More</a>
+                        <button class="btn btn-primary card__button" data-id="mouse">Buy Now</button>
                     </div>
                 </article>
 
                 <article class="card__article">
                     <img src="img/pillow.png" alt="image" class="card__img">
-
                     <div class="card__data">
-                        <span class="card__description">Poon Hill, Nepal</span>
                         <h2 class="card__title">Almofada Creeper</h2>
-                        <a href="#" class="card__button">Read More</a>
+                        <button class="btn btn-primary card__button" data-id="pillow">Buy Now</button>
                     </div>
                 </article>
 
                 <article class="card__article">
                     <img src="img/monitor.png" alt="image" class="card__img">
-
                     <div class="card__data">
-                        <span class="card__description">Bojcin Forest, Serbia</span>
                         <h2 class="card__title">Monitor Gaming</h2>
-                        <a href="#" class="card__button">Read More</a>
+                        <button class="btn btn-primary card__button" data-id="monitor">Buy Now</button>
                     </div>
                 </article>
             </div>
         </div>
-
-
     </section>
-
 
 
 
@@ -190,8 +165,8 @@
                     <div class="d-flex gap-2">
                         <a href="" class="footer-link"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
                         <a href="" class="footer-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
-                        <!-- TODO: Decide wether or not to use old twitter icon -->
-                        <!-- <a href=""><i class="fa-brands fa-x-twitter"></i></a> -->
+                        
+                        
                         <a href="" class="footer-link"><i class="fa-brands fa-instagram fa-lg"></i></a>
                         <a href="" class="footer-link"><i class="fa-brands fa-youtube fa-lg"></i></a>
                         <a href="" class="footer-link"><i class="fa-brands fa-twitch fa-lg"></i></a>
@@ -210,7 +185,6 @@
         crossorigin="anonymous"></script>
 
     <script>
-        // sincroniza posição do ponteiro p/ o efeito
         const syncPointer = ({ x, y }) => {
             document.documentElement.style.setProperty('--x', x.toFixed(2));
             document.documentElement.style.setProperty('--xp', (x / window.innerWidth).toFixed(2));
@@ -219,44 +193,115 @@
         };
         document.body.addEventListener('pointermove', syncPointer, { passive: true });
 
-        // injeta o glow nas cards existentes
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.card__article').forEach((card, i) => {
-                // marca a card como "glow container"
                 card.setAttribute('data-glow', '');
 
-                // cria camada outer (esfumada)
                 const outer = document.createElement('div');
                 outer.setAttribute('data-glow', '');
                 card.appendChild(outer);
 
-                // garante arredondamento consistente com a imagem (1.5rem ~= 24px)
                 const r = getComputedStyle(card).borderRadius || '24px';
                 const rNum = parseFloat(r) || 24;
 
-                // parâmetros padrão (podes ajustar por card se quiseres)
-                card.style.setProperty('--radius', String(rNum));   // em px
-                card.style.setProperty('--border', '2');            // espessura do anel
-                card.style.setProperty('--size', '200');            // diâmetro da spotlight
-                card.style.setProperty('--outer', '1');             // força do outer blur
+                card.style.setProperty('--radius', String(rNum));   
+                card.style.setProperty('--border', '2');            
+                card.style.setProperty('--size', '200');          
+                card.style.setProperty('--outer', '1');             
                 card.style.setProperty('--saturation', '100');
                 card.style.setProperty('--lightness', '70');
 
-                // dá uma variação de cor entre as cards
-                // base 220 (azul), spread 200 para variar no eixo do ecrã
                 card.style.setProperty('--base', i % 2 ? '220' : '80');
                 card.style.setProperty('--spread', i % 2 ? '200' : '500');
 
-                // opcional: se quiseres *sem* haze de fundo (só borda), deixa transparente
-                card.style.setProperty('--backdrop', 'transparent'); // ou "hsl(0 0% 60% / 0.12)"
+                card.style.setProperty('--backdrop', 'transparent'); 
                 card.style.setProperty('--backup-border', 'transparent');
 
-                // importante: não bloquear os hovers/links internos
-                card.style.setProperty('--bg-spot-opacity', '0.10');     // intensidade da mancha de fundo
-                card.style.setProperty('--border-spot-opacity', '1');     // intensidade da cor
-                card.style.setProperty('--border-light-opacity', '0.9');  // brilho branco
+                card.style.setProperty('--bg-spot-opacity', '0.10');     
+                card.style.setProperty('--border-spot-opacity', '1');     
+                card.style.setProperty('--border-light-opacity', '0.9');  
             });
         });
+    </script>
+
+    <script>
+    const cartKey = 'shoppingCart';
+
+    function getCart() {
+        return JSON.parse(localStorage.getItem(cartKey)) || [];
+    }
+
+    function updateCartCount() {
+        const cart = getCart();
+        const cartCount = document.getElementById('cart-count');
+        cartCount.textContent = cart.length; 
+        
+        if (cart.length > 0) {
+            cartCount.classList.add('show');
+        } else {
+            cartCount.classList.remove('show');
+        }
+    }
+
+    function addToCart(item) {
+        const cart = getCart();
+        cart.push(item); 
+        localStorage.setItem(cartKey, JSON.stringify(cart)); 
+        updateCartCount(); 
+    }
+
+    function removeItem(itemId) {
+        let cart = getCart();
+        cart = cart.filter(item => item.id !== itemId);
+        localStorage.setItem(cartKey, JSON.stringify(cart));
+        updateCartCount(); 
+        renderCartItems(); 
+    }
+
+    function renderCartItems() {
+        const cart = getCart();
+        const cartDropdownMenu = document.getElementById('cartDropdownMenu');
+        cartDropdownMenu.innerHTML = ''; 
+
+        if (cart.length === 0) {
+            cartDropdownMenu.innerHTML = '<li><a class="dropdown-item" href="#">Seu Carrinho está Vazio</a></li>';
+        } else {
+            cart.forEach(item => {
+                const cartItem = document.createElement('li');
+                cartItem.classList.add('dropdown-item');
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img" />
+                    <span class="cart-item-name">${item.name} (x${item.quantity})</span>
+                    <button class="btn btn-sm btn-danger float-end" onclick="removeItem('${item.id}')">Remover</button>`;
+                cartDropdownMenu.appendChild(cartItem);
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+         localStorage.removeItem(cartKey); 
+
+        updateCartCount(); 
+
+        const buyButtons = document.querySelectorAll('.card__button');
+        buyButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const itemId = e.target.getAttribute('data-id');  
+                const itemName = e.target.closest('.card__article').querySelector('.card__title').textContent;
+                const itemPrice = parseFloat(e.target.getAttribute('data-price'));
+                const itemImage = e.target.closest('.card__article').querySelector('img').src;
+
+                const item = {
+                    id: itemId,
+                    name: itemName,
+                    price: itemPrice,
+                    image: itemImage
+                };
+
+                addToCart(item); 
+            });
+        });
+    });
     </script>
 
 

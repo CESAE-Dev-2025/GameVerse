@@ -297,7 +297,6 @@
   <script src="vendor/tilt/tilt.jquery.min.js"></script>
   <script> $('.js-tilt').tilt({ scale: 1.1 }); </script>
 
-  <!-- Google Analytics (opcional) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -365,13 +364,11 @@
     });
   </script>
 
-  <!-- EmailJS SDK + init -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     emailjs.init({ publicKey: 'ThuNHCZmdbg_bfRDC' });
   </script>
 
-  <!-- Submit do formulário: envia APENAS para o utilizador (auto-resposta) -->
   <script>
     (function () {
       const form = document.getElementById('contact-form');
@@ -383,13 +380,11 @@
         e.preventDefault();
         if (status) { status.style.color = ''; status.textContent = 'Enviando...'; }
 
-        // Bloqueia bots simples
         if (form._gotcha && form._gotcha.value) {
           if (status) { status.style.color = '#ff8080'; status.textContent = 'Spam bloqueado.'; }
           return;
         }
 
-        // 2) Coleta dados
         const name = form.name.value.trim() || 'Gamer';
         const email = form.email.value.trim();
         const subject = form.subject.value.trim() || 'Mensagem recebida — GameVerse';
@@ -400,11 +395,10 @@
           return;
         }
 
-        // 3) Envia via EmailJS (PRECISAS do service_id e template_id)
         try {
           await emailjs.send('service_9ffn7kk', 'template_ls8tggb', {
             to_name:   name,
-            to_email:  email,     // usa isto no campo "To" do template: {{to_email}}
+            to_email:  email,     
             subject:   subject,
             message:   `Olá ${name}! 👋\n\nRecebemos a sua mensagem:\n\n"${message}"\n\nObrigado por contactar o GameVerse. Responderemos em breve!\n\nAbraço,\nEquipa GameVerse 🎮`,
             site_name: 'GameVerse'
