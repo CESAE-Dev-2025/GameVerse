@@ -17,10 +17,11 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="forum.css">
+
+    <link rel="stylesheet" href="./cards.css">
 </head>
 
-<body>
+<body style="background: var(--background);">
     <header>
         <!-- TODO: Change hamburguer menu color to white -->
         <nav class="navbar fixed-top navbar-expand-lg py-3">
@@ -56,6 +57,9 @@
         </nav>
     </header>
 
+
+
+
     <main>
         <section id="page-header" class="py-7">
             <div class="container-xxl mx-auto px-3">
@@ -73,6 +77,87 @@
             </div>
         </section>
     </main>
+
+    <section>
+        <div class="container" style="height: 60vh">
+            <div class="card__container">
+                <article class="card__article">
+                    <img src="img/headset.png" alt="image" class="card__img">
+
+                    <div class="card__data">
+                        <span class="card__description">Vancouver Mountains, Canada</span>
+                        <h2 class="card__title">Auscutadores gaming </h2>
+                        <a href="#" class="card__button">Read More</a>
+                    </div>
+                </article>
+
+                <article class="card__article">
+                    <img src="img/chair.png" alt="image" class="card__img">
+
+                    <div class="card__data">
+                        <span class="card__description">Poon Hill, Nepal</span>
+                        <h2 class="card__title">Starry Night</h2>
+                        <a href="#" class="card__button">Read More</a>
+                    </div>
+                </article>
+
+                <article class="card__article">
+                    <img src="img/keyboard.png" alt="image" class="card__img">
+
+                    <div class="card__data">
+                        <span class="card__description">Bojcin Forest, Serbia</span>
+                        <h2 class="card__title">Path Of Peace</h2>
+                        <a href="#" class="card__button">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+
+
+
+        <div class="container" style="height: 60vh">
+            <div class="card__container">
+                <article class="card__article">
+                    <img src="img/mouse.png" alt="image" class="card__img">
+
+                    <div class="card__data">
+                        <span class="card__description">Vancouver Mountains, Canada</span>
+                        <h2 class="card__title">Rato Gaming</h2>
+                        <a href="#" class="card__button">Read More</a>
+                    </div>
+                </article>
+
+                <article class="card__article">
+                    <img src="img/pillow.png" alt="image" class="card__img">
+
+                    <div class="card__data">
+                        <span class="card__description">Poon Hill, Nepal</span>
+                        <h2 class="card__title">Almofada Creeper</h2>
+                        <a href="#" class="card__button">Read More</a>
+                    </div>
+                </article>
+
+                <article class="card__article">
+                    <img src="img/monitor.png" alt="image" class="card__img">
+
+                    <div class="card__data">
+                        <span class="card__description">Bojcin Forest, Serbia</span>
+                        <h2 class="card__title">Monitor Gaming</h2>
+                        <a href="#" class="card__button">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
 
     <footer class="">
         <div class="container-xxl py-5 px-3">
@@ -123,6 +208,58 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script>
+        // sincroniza posição do ponteiro p/ o efeito
+        const syncPointer = ({ x, y }) => {
+            document.documentElement.style.setProperty('--x', x.toFixed(2));
+            document.documentElement.style.setProperty('--xp', (x / window.innerWidth).toFixed(2));
+            document.documentElement.style.setProperty('--y', y.toFixed(2));
+            document.documentElement.style.setProperty('--yp', (y / window.innerHeight).toFixed(2));
+        };
+        document.body.addEventListener('pointermove', syncPointer, { passive: true });
+
+        // injeta o glow nas cards existentes
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.card__article').forEach((card, i) => {
+                // marca a card como "glow container"
+                card.setAttribute('data-glow', '');
+
+                // cria camada outer (esfumada)
+                const outer = document.createElement('div');
+                outer.setAttribute('data-glow', '');
+                card.appendChild(outer);
+
+                // garante arredondamento consistente com a imagem (1.5rem ~= 24px)
+                const r = getComputedStyle(card).borderRadius || '24px';
+                const rNum = parseFloat(r) || 24;
+
+                // parâmetros padrão (podes ajustar por card se quiseres)
+                card.style.setProperty('--radius', String(rNum));   // em px
+                card.style.setProperty('--border', '2');            // espessura do anel
+                card.style.setProperty('--size', '200');            // diâmetro da spotlight
+                card.style.setProperty('--outer', '1');             // força do outer blur
+                card.style.setProperty('--saturation', '100');
+                card.style.setProperty('--lightness', '70');
+
+                // dá uma variação de cor entre as cards
+                // base 220 (azul), spread 200 para variar no eixo do ecrã
+                card.style.setProperty('--base', i % 2 ? '220' : '80');
+                card.style.setProperty('--spread', i % 2 ? '200' : '500');
+
+                // opcional: se quiseres *sem* haze de fundo (só borda), deixa transparente
+                card.style.setProperty('--backdrop', 'transparent'); // ou "hsl(0 0% 60% / 0.12)"
+                card.style.setProperty('--backup-border', 'transparent');
+
+                // importante: não bloquear os hovers/links internos
+                card.style.setProperty('--bg-spot-opacity', '0.10');     // intensidade da mancha de fundo
+                card.style.setProperty('--border-spot-opacity', '1');     // intensidade da cor
+                card.style.setProperty('--border-light-opacity', '0.9');  // brilho branco
+            });
+        });
+    </script>
+
+
 
 </body>
 
