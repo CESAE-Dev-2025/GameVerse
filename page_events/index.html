@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- Add Fontawesome Icons -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Add Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -72,12 +72,12 @@
                 <div id="btn-events" class="btn-group p-1" role="switch">
                     <button id="btn-next-events" class="btn btn-events rounded-pill active" type="button"
                         data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"
-                        aria-controls="next-events past-events" onclick="toggleActive()">Próximos
+                        aria-controls="next-events past-events" onclick="toggleActiveEvents()">Próximos
                         Eventos</button>
 
                     <button id="btn-past-events" class="btn btn-events rounded-pill" type="button"
                         data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"
-                        aria-controls="next-events past-events" onclick="toggleActive()">Eventos
+                        aria-controls="next-events past-events" onclick="toggleActiveEvents()">Eventos
                         Passados</button>
                 </div>
 
@@ -419,7 +419,7 @@
         crossorigin="anonymous"></script>
 
     <script>
-        function toggleActive() {
+        function toggleActiveEvents() {
             const pastEventBtn = document.getElementById("btn-past-events");
             const nextEventBtn = document.getElementById("btn-next-events");
             pastEventBtn.classList.toggle("active");
