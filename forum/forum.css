@@ -102,6 +102,10 @@
             }
         }
 
+        & .profile-picture {
+            width: 48px;
+        }
+
         & .card-text {
             color: var(--color-slate-400);
             font-size: 0.875rem;
@@ -113,7 +117,7 @@
             }
         }
 
-        & .stats{
+        & .stats {
             color: var(--color-slate-400);
         }
     }
