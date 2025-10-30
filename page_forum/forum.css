@@ -1,0 +1,12 @@
+.btn-new-topic {
+    color: var(--color-slate-900) !important;
+    background-color: var(--color-primary);
+    font-size: 14px;
+
+    &:hover {
+        background-color: var(--color-yellow-600) !important;
+    }
+    & .fa-plus {
+        color: var(--color-slate-900) !important;
+    }
+}
