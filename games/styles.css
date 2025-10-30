@@ -1,0 +1,107 @@
+.card-jogo {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+
+  display: flex;
+  flex-direction: column; /* permite organizar imagem + conteúdo */
+  height: 100%; /* ocupa toda a altura da coluna */
+}
+
+.card-jogo img {
+  width: 100%;
+  height: 200px; /* define altura fixa para todas as imagens */
+  object-fit: cover; /* mantém proporção da imagem e corta excesso */
+}
+
+.card-jogo .p-3 {
+  flex-grow: 1; /* faz o conteúdo ocupar o resto do card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* distribui conteúdo verticalmente */
+}
+
+
+
+
+
+/* ===== Guia para Iniciantes (melhorado) ===== */
+.guia {
+  background: linear-gradient(180deg, #161821 0%, #0e111a 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #d6d8e1;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.guia h3 {
+  color: #f5c400;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.guia .intro {
+  max-width: 750px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  color: #b8bccf;
+}
+
+.guia-conteudo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.guia-item {
+  background-color: #1c1e2a;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guia-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+.guia-item i {
+  font-size: 2.5rem;
+  color: #f5c400;
+  margin-bottom: 1rem;
+}
+
+.guia-item h4 {
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.guia-item p {
+  color: #b8bccf;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-guia {
+  display: inline-block;
+  background-color: #f5c400;
+  color: #161821;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-guia:hover {
+  background-color: #d9a900;
+  color: #0e111a;
+}
+
+
