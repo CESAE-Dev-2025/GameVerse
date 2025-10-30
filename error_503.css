@@ -14,7 +14,7 @@ body {
     color: #fff;
 }
 body {
-    background-image: url(./images/total-war-rome-2-fighter.jpg);
+    background-image: url("./images/total-war-rome-2-fighter.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
