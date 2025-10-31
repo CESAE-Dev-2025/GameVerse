@@ -69,7 +69,7 @@ comunidade.
 
 #### Web
 
-<p style="display: flex; justify-content: space-between;">
+<p style="display: flex; justify-content: space-between; align-items: start;">
   <img src="images/GameVerse_home.png" style="width: 45%;" alt="Página inicial">
   <img src="images/GameVerse_games.png" style="width: 45%;" alt="Jogos">
 </p>
@@ -105,13 +105,14 @@ comunidade.
 
 Este projeto foi desenvolvido com uso das tecnologias listadas abaixo, a partir de um layout do Figma ([https://www.figma.com/make/RTOukb07RLih0oaiRRV9Sk/Gaming-Community-Website?node-id=0-1&p=f&t=4qJdik9Wt1qBX8LH-0](https://www.figma.com/make/RTOukb07RLih0oaiRRV9Sk/Gaming-Community-Website?node-id=0-1&p=f&t=4qJdik9Wt1qBX8LH-0)).
 
-<!-- TODO: Add used APIs (for map, profile pictures and mail service) -->
+<!-- TODO: Add used APIs (for map and mail service) -->
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
   <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/GoogleMaps_API-blue?style=for-the-badge&logo=googlemaps&logoColor=white" alt="GoogleMaps API">
+  <img src="https://img.shields.io/badge/DiceBear-3b3b3b?style=for-the-badge&logo=dicebear&logoColor=white" alt="DiceBear">
+  <!-- <img src="https://img.shields.io/badge/GoogleMaps_API-blue?style=for-the-badge&logo=googlemaps&logoColor=white" alt="GoogleMaps API"> -->
 </p>
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
@@ -191,13 +192,14 @@ Link do Projeto: [https://github.com/CESAE-Dev-2025/GameVerse](https://github.co
 Agradeçemos ao [CESAE](https://cesaedigital.pt/fldrSite/default.aspx) pela oportunidade de crescimento e à [Lais Reis](https://github.com/laisreis04) pelo desafio.
 
 Agradeço também aos mantenedores dos projetos listados abaixo:
-<!-- TODO: Adicionar links das APIs utilizadas -->
+<!-- TODO: Adicionar links das APIs utilizadas para mapa e envio de email -->
 * [Choose an Open Source License](https://choosealicense.com)
 * [Best README Template](https://github.com/othneildrew/Best-README-Template)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
 * [Bootstrap](https://getbootstrap.com)
-* [Google Maps API](https://developers.google.com/maps/documentation/javascript/)
+* [DiceBear](https://github.com/dicebear/dicebear)
+<!-- * [Google Maps API](https://developers.google.com/maps/documentation/javascript/) -->
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
