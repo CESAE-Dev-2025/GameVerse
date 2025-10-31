@@ -7,7 +7,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center"><a style="text-transform: uppercase; text-decoration: none; color:#fff;font-size: 24px; font-weight: normal;" href="https://github.com/cesae-dev-2025/GabeVerse/">Game<span style="color: #f0b100;">verse</span></a></h3>
+  <a href="https://github.com/cesae-dev-2025/GabeVerse/">
+    <img src="images/logo.svg" alt="Logo" height="70">
+  </a>
+  
+  
 
   <p align="center">Um universo de conteúdo para a comunidade Gamer!
     <br />
