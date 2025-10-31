@@ -1,50 +1,37 @@
 # 🎮 GameVerse
 
-O **GameVerse** é um website criado para servir e unir a comunidade gamer.  
-Inspirado na plataforma **Steam**, o projeto apresenta um design moderno com **tema escuro**, proporcionando uma experiência imersiva, dinâmica e visualmente apelativa.
+O **GameVerse** é um site criado para a comunidade gamer, inspirado na plataforma **Steam**, com um **background escuro** e um design moderno pensado para os jogadores.
 
-🔗 **Acede ao site:** [GameVerse](https://cesae-dev-2025.github.io/GameVerse/)
+No **índice**, apresentamos a nossa comunidade, destacamos os **jogos mais populares** através do catálogo e mostramos os **eventos que ocorrerão em breve**.
 
----
+Na **parte dos jogos**, é possível explorar o nosso catálogo, aceder a links para download ou compra e consultar um **guia para iniciantes** com dicas úteis.
 
-## 🕹️ Funcionalidades
+O site também disponibiliza um **fórum**, onde os membros da comunidade podem **interagir**, **discutir ideias** e **partilhar experiências** entre si.
 
-- **Página Inicial:** Apresentação da comunidade gamer, com destaque para jogos populares e eventos futuros.  
-- **Jogos:** Catálogo interativo de jogos com descrições, links para download ou compra e guias para iniciantes.  
-- **Eventos:** Secção dedicada a eventos da comunidade e torneios que irão decorrer em breve.  
-- **Fórum:** Espaço de interação onde os utilizadores podem discutir ideias, partilhar experiências e comunicar entre si.  
-- **Design Responsivo:** Compatível com dispositivos móveis, tablets e desktops.
+O **GameVerse** foi desenvolvido com o objetivo de reunir os gamers num só espaço digital, promovendo a interação e a descoberta de novos jogos e eventos.
 
 ---
 
 ## 💻 Tecnologias Utilizadas
 
-O GameVerse foi desenvolvido com foco na performance e na interatividade, utilizando as seguintes tecnologias:
+Para o desenvolvimento deste projeto foram utilizadas as seguintes tecnologias:
 
-- **HTML5** → Estrutura das páginas e conteúdo semântico.  
-- **CSS3** → Estilo e personalização do layout com tema escuro.  
-- **Bootstrap** → Framework que garante um design moderno e responsivo.  
-- **JavaScript** → Funcionalidades dinâmicas e interativas que melhoram a experiência do utilizador.
+- **HTML5**  
+- **CSS3**  
+- **Bootstrap**  
+- **JavaScript**
 
----
-
-## 👥 Equipa de Desenvolvimento
-
-O projeto **GameVerse** foi desenvolvido em equipa por três membros apaixonados por tecnologia e gaming:
-
-- 👤 [Leandro Gabriel]
-- 👤 [Jose Pinho]
-- 👤 [Ricardo Golega]
+Estas tecnologias foram escolhidas para garantir uma **maior dinâmica**, **interatividade** e **responsividade** em todo o site.
 
 ---
 
-## 🚀 Objetivo do Projeto
+## 👥 Equipa GameVerse
 
-O GameVerse foi criado com o propósito de:
-- Reunir a comunidade gamer num único espaço digital;  
-- Promover a partilha de experiências e interesses comuns;  
-- Oferecer uma plataforma de descoberta de novos jogos e eventos;  
-- Criar um ambiente interativo e social através do fórum.
+Este projeto foi desenvolvido por três membros da comunidade GameVerse:
+
+- 👤 [Leandro Gabriel]  
+- 👤 [Jose Pinho]  
+- 👤 [Ricardo Buiza]
 
 ---
 
@@ -54,4 +41,4 @@ O GameVerse foi criado com o propósito de:
 
 ---
 
-
+🎮 *GameVerse — Onde os gamers se encontram.*
