@@ -29,18 +29,18 @@
       <a href="#sobre-o-projecto">Sobre o Projecto</a>
       <ul>
         <li><a href="#tecnologias-utilizadas">Tecnologias utilizadas</a></li>
-        <li><a href="#capturas-de-ecra">Capturas de ecrã</a></li>
+        <li><a href="#capturas-de-ecrã">Capturas de ecrã</a></li>
       </ul>
     </li>
     <li>
       <a href="#como-utilizar">Como utilizar</a>
       <ul>
-        <li><a href="#pre-requisitos">Pré-requisitos</a></li>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
         <li><a href="#instalação">Instalação</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">Licença</a></li>
+    <li><a href="#licença">Licença</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#agradecimentos">Agradecimentos</a></li>
   </ol>
@@ -165,7 +165,7 @@ Veja os ['issues' abertos](https://github.com/cesae-dev-2025/GameVerse/issues) p
 
 
 <!-- LICENSE -->
-## License
+## Licença
 
 Distribuido sob a Licença Unlicense. veja `LICENSE.txt` para mais informações.
 
@@ -173,7 +173,7 @@ Distribuido sob a Licença Unlicense. veja `LICENSE.txt` para mais informações
 
 
 <!-- CONTACT -->
-## Contact
+## Contacto
 
 José Pinho - [GitHub][github-jose-url]
 
