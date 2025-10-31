@@ -1,277 +1,230 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 [![Unlicense License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/cesae-dev-2025/GabeVerse/">
+    <img src="images/logo.svg" alt="Logo" height="70">
   </a>
-
-  <h3 align="center">GameVerse</h3>
+  
+  
 
   <p align="center">Um universo de conteúdo para a comunidade Gamer!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Veja  a Demo</strong></a>
+    <a href="https://cesae-dev-2025.github.io/GameVerse/"><strong>Veja a Demo</strong></a>
     <br />
-    <!-- <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    &middot;
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    &middot;
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> -->
   </p>
 </div>
 
 
-
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Índice</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o Projecto</a>
+      <a href="#sobre-o-projecto">Sobre o Projecto</a>
       <ul>
-        <li><a href="#built-with">Tecnologias utilizadas</a></li>
+        <li><a href="#tecnologias-utilizadas">Tecnologias utilizadas</a></li>
+        <li><a href="#capturas-de-ecrã">Capturas de ecrã</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#como-utilizar">Como utilizar</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisitos</a></li>
-        <li><a href="#installation">Instalatção</a></li>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#licença">Licença</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#agradecimentos">Agradecimentos</a></li>
   </ol>
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Sobre o Projecto
 
-[![Gameverse Screenshot][product-screenshot]](https://example.com)
+![Gameverse Screenshot][product-screenshot]
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Esse projeto apresenta um website de comunidade Gamer. É composto pelas seguintes páginas:
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+1. **Página Inicial**: Apresentação da comunidade, jogos populares em destaque e eventos futuros.
+2. **Jogos**: Listagem de jogos populares com descrições, links para compra ou download, e guias básicos para
+iniciantes.
+3. **Eventos e Torneios**: Página dedicada a eventos, competições e torneios organizados pela comunidade, com
+cronogramas e opções de inscrição online.
+4. **Fórum**: Seção ~~interativa~~ (em construção) onde os membros podem criar tópicos, discutir estratégias, compartilhar dicas e interagir.
+5. **Loja**: Loja virtual com mercadorias da comunidade (camisetas, acessórios, etc.) e produtos digitais como
+wallpapers exclusivos.
+6. **Contato**: Formulário para contato com os administradores e informações de redes sociais e canais da
+comunidade.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+### Capturas de ecrã
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+#### Web
+
+<p style="display: flex; justify-content: space-between; align-items: start;">
+  <img src="images/GameVerse_home.png" style="width: 45%;" alt="Página inicial">
+  <img src="images/GameVerse_games.png" style="width: 45%;" alt="Jogos">
+</p>
+<br>
+<p style="display: flex; justify-content: space-between;">
+  <img src="images/GameVerse_events.png" style="width: 45%;" alt="Eventos">
+  <img src="images/GameVerse_forum.png" style="width: 45%;" alt="Fórum">
+</p>
+<br>
+<p style="display: flex; justify-content: space-between;">
+  <img src="images/GameVerse_store.png" style="width: 45%;" alt="Loja">
+  <img src="images/GameVerse_contact.png" style="width: 45%;" alt="Contato">
+</p>
+
+#### Mobile
+
+<p style="display: flex; justify-content: space-between;">
+  <img src="images/GameVerse_home_mobile.png" style="width: 30%;" alt="Página inicial">
+  <img src="images/GameVerse_games_mobile.png" style="width: 30%;" alt="Jogos">
+  <img src="images/GameVerse_events_mobile.png" style="width: 30%;" alt="Eventos">
+</p>
+<br>
+<p style="display: flex; justify-content: space-between;">
+  <img src="images/GameVerse_forum_mobile.png" style="width: 30%;" alt="Fórum">
+  <img src="images/GameVerse_store_mobile.png" style="width: 30%;" alt="Loja">
+  <img src="images/GameVerse_contact_mobile.png" style="width: 30%;" alt="Contato">
+</p>
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
-### Built With
+### Tecnologias utilizadas
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Este projeto foi desenvolvido com uso das tecnologias listadas abaixo, a partir de um layout do Figma ([https://www.figma.com/make/RTOukb07RLih0oaiRRV9Sk/Gaming-Community-Website?node-id=0-1&p=f&t=4qJdik9Wt1qBX8LH-0](https://www.figma.com/make/RTOukb07RLih0oaiRRV9Sk/Gaming-Community-Website?node-id=0-1&p=f&t=4qJdik9Wt1qBX8LH-0)).
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+<!-- TODO: Add used APIs (for map and mail service) -->
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/DiceBear-3b3b3b?style=for-the-badge&logo=dicebear&logoColor=white" alt="DiceBear">
+  <!-- <img src="https://img.shields.io/badge/GoogleMaps_API-blue?style=for-the-badge&logo=googlemaps&logoColor=white" alt="GoogleMaps API"> -->
+</p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Como utilizar
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Para utilizar este projeto, basta clonar o repositório e consguir uma API do Google Maps ou substituí-la por outro serviço.
 
-### Prerequisites
+### Pré-requisitos
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+É preciso ter o Git instalado.
 
-### Installation
+### Instalação
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+<!-- TODO: especificar API keys necessárias -->
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Consiga uma API Key em [https://console.cloud.google.com/](https://console.cloud.google.com/)
+2. Clone o repositório
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/CESAE-Dev-2025/GameVerse.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
+3. Entre com sua API em `script.js`, logo acima da definição da variável `map`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   key: "ENTER YOUR API",
    ```
-5. Change git remote url to avoid accidental pushes to base project
+4. Modifique a URL do git remote para evitar `pushes` acidentais para o projeto base
    ```sh
    git remote set-url origin github_username/repo_name
    git remote -v # confirm the changes
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Adicionar API do Google Maps
+- [x] Adicionar mais localizações
+- [x] Criar a Loja
+- [ ] Utilizar um Framework que permita reaproveitar componentes
+- [ ] Adicionar interatividade ao Fórum
+- [ ] Adicionar interatividade com o carrinho de compras da loja
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+Veja os ['issues' abertos](https://github.com/cesae-dev-2025/GameVerse/issues) para obter uma lista completa e atualizadas das funcionalidades propostas e bugs conhecidos.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Top contributors:
-
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
-</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
 <!-- LICENSE -->
-## License
+## Licença
 
-Distributed under the Unlicense License. See `LICENSE.txt` for more information.
+Distribuido sob a Licença Unlicense. veja `LICENSE.txt` para mais informações.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
 <!-- CONTACT -->
-## Contact
+## Contacto
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+José Pinho - [GitHub][github-jose-url]
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Leandro Gabriel - [GitHub][github-leandro-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Ricardo Golegã - [GitHub][github-ricardo-url]
 
+Link do Projeto: [https://github.com/CESAE-Dev-2025/GameVerse](https://github.com/CESAE-Dev-2025/GameVerse)
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Agradecimentos
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Agradeçemos ao [CESAE](https://cesaedigital.pt/fldrSite/default.aspx) pela oportunidade de crescimento e à [Lais Reis](https://github.com/laisreis04) pelo desafio.
 
+Agradeço também aos mantenedores dos projetos listados abaixo:
+<!-- TODO: Adicionar links das APIs utilizadas para mapa e envio de email -->
 * [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
+* [Best README Template](https://github.com/othneildrew/Best-README-Template)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Bootstrap](https://getbootstrap.com)
+* [DiceBear](https://github.com/dicebear/dicebear)
+<!-- * [Google Maps API](https://developers.google.com/maps/documentation/javascript/) -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
+[product-screenshot]: ./images/index-hero-bg.png
+[contributors-shield]: https://img.shields.io/github/contributors/CESAE-Dev-2025/GameVerse.svg?style=for-the-badge
+[contributors-url]: https://github.com/CESAE-Dev-2025/GameVerse/graphs/contributors
+
+[license-shield]: https://img.shields.io/github/license/CESAE-Dev-2025/GameVerse.svg?style=for-the-badge
+[license-url]: https://github.com/CESAE-Dev-2025/GameVerse/blob/master/LICENSE.txt
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=blue
+[linkedin-url]: https://linkedin.com/in/leandro-assis-gabriel
+
+[github-jose-url]:https://github.com/josepinho22
+[github-leandro-url]:https://github.com/lassisg
+[github-ricardo-url]:https://github.com/RicardoBu
+
+[HTML5]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[HTML5-url]: https://developer.mozilla.org/pt-BR/docs/Web/HTML
+[CSS3]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[CSS3-url]: https://developer.mozilla.org/pt-BR/docs/Web/HTML
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[Javascript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[Javascript-url]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript 
