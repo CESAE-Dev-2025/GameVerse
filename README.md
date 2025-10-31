@@ -67,22 +67,36 @@ comunidade.
 
 ### Capturas de ecrã
 
-<!-- TODO: Add screenshots -->
+#### Web
+
 <p style="display: flex; justify-content: space-between;">
-  <img src="images/LivingAround_home.png" style="width: 45%;" alt="Página inicial">
-  <img src="images/LivingAround_accomodations.png" style="width: 45%;" alt="Jogos">
+  <img src="images/GameVerse_home.png" style="width: 45%;" alt="Página inicial">
+  <img src="images/GameVerse_games.png" style="width: 45%;" alt="Jogos">
 </p>
 <br>
 <p style="display: flex; justify-content: space-between;">
-  <img src="images/LivingAround_destinations.png" style="width: 45%;" alt="Eventos">
-  <img src="images/LivingAround_contacts.png" style="width: 45%;" alt="Fórum">
+  <img src="images/GameVerse_events.png" style="width: 45%;" alt="Eventos">
+  <img src="images/GameVerse_forum.png" style="width: 45%;" alt="Fórum">
 </p>
 <br>
 <p style="display: flex; justify-content: space-between;">
-  <img src="images/LivingAround_destinations.png" style="width: 45%;" alt="Loja">
-  <img src="images/LivingAround_contacts.png" style="width: 45%;" alt="Contato">
+  <img src="images/GameVerse_store.png" style="width: 45%;" alt="Loja">
+  <img src="images/GameVerse_contact.png" style="width: 45%;" alt="Contato">
 </p>
 
+#### Mobile
+
+<p style="display: flex; justify-content: space-between;">
+  <img src="images/GameVerse_home_mobile.png" style="width: 30%;" alt="Página inicial">
+  <img src="images/GameVerse_games_mobile.png" style="width: 30%;" alt="Jogos">
+  <img src="images/GameVerse_events_mobile.png" style="width: 30%;" alt="Eventos">
+</p>
+<br>
+<p style="display: flex; justify-content: space-between;">
+  <img src="images/GameVerse_forum_mobile.png" style="width: 30%;" alt="Fórum">
+  <img src="images/GameVerse_store_mobile.png" style="width: 30%;" alt="Loja">
+  <img src="images/GameVerse_contact_mobile.png" style="width: 30%;" alt="Contato">
+</p>
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
