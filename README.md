@@ -32,9 +32,9 @@ O GameVerse foi desenvolvido com foco na performance e na interatividade, utiliz
 
 O projeto **GameVerse** foi desenvolvido em equipa por três membros apaixonados por tecnologia e gaming:
 
-- 👤 [Nome do colega 1]
-- 👤 [Nome do colega 2]
-- 👤 [O teu nome]
+- 👤 [Leandro Gabriel]
+- 👤 [Jose Pinho]
+- 👤 [Ricardo Golega]
 
 ---
 
@@ -54,10 +54,4 @@ O GameVerse foi criado com o propósito de:
 
 ---
 
-## 📸 Capturas de Ecrã *(opcional)*
 
-Podes adicionar aqui imagens do site, por exemplo:
-
-```markdown
-![Página Inicial do GameVerse](images/homepage.png)
-![Catálogo de Jogos](images/catalogo.png)
