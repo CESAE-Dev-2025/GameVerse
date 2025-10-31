@@ -175,7 +175,9 @@ Distribuido sob a Licença Unlicense. veja `LICENSE.txt` para mais informações
 ## Contact
 
 José Pinho - [GitHub][github-jose-url]
+
 Leandro Gabriel - [GitHub][github-leandro-url]
+
 Ricardo Golegã - [GitHub][github-ricardo-url]
 
 Link do Projeto: [https://github.com/CESAE-Dev-2025/GameVerse](https://github.com/CESAE-Dev-2025/GameVerse)
