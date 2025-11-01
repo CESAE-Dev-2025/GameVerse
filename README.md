@@ -131,19 +131,19 @@ Para utilizar este projeto, basta clonar o repositório e consguir uma API do Go
 
 <!-- TODO: especificar API keys necessárias -->
 
-1. Consiga uma API Key em [https://console.cloud.google.com/](https://console.cloud.google.com/)
-2. Clone o repositório
+<!-- 1. Consiga uma API Key em [https://console.cloud.google.com/](https://console.cloud.google.com/) -->
+1. Clone o repositório
    ```sh
    git clone https://github.com/CESAE-Dev-2025/GameVerse.git
    ```
-3. Entre com sua API em `script.js`, logo acima da definição da variável `map`
+<!-- 2. Entre com sua API em `script.js`, logo acima da definição da variável `map`
    ```js
    key: "ENTER YOUR API",
-   ```
-4. Modifique a URL do git remote para evitar `pushes` acidentais para o projeto base
+   ``` -->
+2. Modifique a URL do git remote para evitar `pushes` acidentais para o projeto base
    ```sh
    git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
+   git remote -v # confirma as alterações
    ```
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
