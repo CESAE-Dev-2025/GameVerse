@@ -121,7 +121,7 @@ Este projeto foi desenvolvido com uso das tecnologias listadas abaixo, a partir 
 <!-- GETTING STARTED -->
 ## Como utilizar
 
-Para utilizar este projeto, basta clonar o repositório e consguir uma API do Google Maps ou substituí-la por outro serviço.
+Para utilizar este projeto, basta clonar o repositório.
 
 ### Pré-requisitos
 
