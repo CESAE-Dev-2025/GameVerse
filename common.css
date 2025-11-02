@@ -4,6 +4,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
     --font-size: 16px;
+    --foreground: #0a0a0a;
     --accent-foreground: #030213;
 
     --color-primary: rgb(240, 177, 0);
@@ -23,7 +24,7 @@
     --card-foreground: rgb(10, 10, 10);
 
     /* --background: #fff; */
-    /* --foreground: rgb(10, 10, 10);
+    /* 
     --card: #fff;
     --card-foreground: rgb(10, 10, 10);
     --popover: rgb(255, 255, 255);
