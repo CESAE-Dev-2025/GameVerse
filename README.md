@@ -70,32 +70,32 @@ comunidade.
 #### Web
 
 <p style="display: flex; justify-content: space-between; align-items: start;">
-  <img src="images/GameVerse_home.png" style="width: 45%;" alt="Página inicial">
-  <img src="images/GameVerse_games.png" style="width: 45%;" alt="Jogos">
+  <img src="images/GameVerse_home.png" style="width: 45%;height:736px; " alt="Página inicial">
+  <img src="images/GameVerse_games.png" style="width: 45%;height:736px;" alt="Jogos">
 </p>
 <br>
 <p style="display: flex; justify-content: space-between;">
-  <img src="images/GameVerse_events.png" style="width: 45%;" alt="Eventos">
-  <img src="images/GameVerse_forum.png" style="width: 45%;" alt="Fórum">
+  <img src="images/GameVerse_events.png" style="width: 45%;height:717px;" alt="Eventos">
+  <img src="images/GameVerse_forum.png" style="width: 45%;height:717px;" alt="Fórum">
 </p>
 <br>
 <p style="display: flex; justify-content: space-between;">
-  <img src="images/GameVerse_store.png" style="width: 45%;" alt="Loja">
-  <img src="images/GameVerse_contact.png" style="width: 45%;" alt="Contato">
+  <img src="images/GameVerse_store.png" style="width: 45%;height:762px;" alt="Loja">
+  <img src="images/GameVerse_contact.png" style="width: 45%;height:762px;" alt="Contato">
 </p>
 
 #### Mobile
 
 <p style="display: flex; justify-content: space-between;">
-  <img src="images/GameVerse_home_mobile.png" style="width: 30%;" alt="Página inicial">
-  <img src="images/GameVerse_games_mobile.png" style="width: 30%;" alt="Jogos">
-  <img src="images/GameVerse_events_mobile.png" style="width: 30%;" alt="Eventos">
+  <img src="images/GameVerse_home_mobile.png" style="width: 30%;height:3117px;" alt="Página inicial">
+  <img src="images/GameVerse_games_mobile.png" style="width: 30%;height:3117px;object-fit: cover" alt="Jogos">
+  <img src="images/GameVerse_events_mobile.png" style="width: 30%;height:3117px;" alt="Eventos">
 </p>
 <br>
 <p style="display: flex; justify-content: space-between;">
-  <img src="images/GameVerse_forum_mobile.png" style="width: 30%;" alt="Fórum">
-  <img src="images/GameVerse_store_mobile.png" style="width: 30%;" alt="Loja">
-  <img src="images/GameVerse_contact_mobile.png" style="width: 30%;" alt="Contato">
+  <img src="images/GameVerse_forum_mobile.png" style="width: 30%;height:3024px;" alt="Fórum">
+  <img src="images/GameVerse_store_mobile.png" style="width: 30%;height:3024px;" alt="Loja">
+  <img src="images/GameVerse_contact_mobile.png" style="width: 30%;height:3024px;" alt="Contato">
 </p>
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
