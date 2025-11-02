@@ -7,7 +7,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/cesae-dev-2025/GabeVerse/">
+  <a href="https://github.com/cesae-dev-2025/GameVerse/">
     <img src="images/logo.svg" alt="Logo" height="70">
   </a>
   
